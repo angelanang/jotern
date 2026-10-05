@@ -6,6 +6,8 @@ What changed in each version, newest first. Format: [Keep a Changelog](https://k
 
 ### Added
 - Repository skeleton, README, presets (2026-10-02)
+- The name Jotern and its brand kit in `docs/design/brand/` (2026-10-05)
+- The Gaphor style sheet and the reference UML sketches in `docs/uml/` (2026-10-05)
 
 ## [0.1.0] - 2026-10-05 (interim demo)
 

@@ -1,6 +1,8 @@
-# Internship Log & Report Helper
+<p align="center"><img src="docs/design/brand/jotern-lockup-transparent-light.svg" alt="Jotern" height="72"></p>
 
-> A work journal for internships: interns log each day in under a minute, and the app turns it into weekly summaries and a report outline in their own school's format.
+# Jotern
+
+> **Jot it daily. Hand it in weekly.** A work journal for interns: log each day in under a minute, and Jotern turns your daily logs into weekly summaries and a report outline in your school's format.
 
 **Status:** in development. v1 is due on 2026-10-08 as my end-of-internship project; the app keeps growing after that.
 
@@ -11,7 +13,8 @@
 - Log each day: what I did, time spent, tags, difficulties, how I solved them, what I learned
 - See a week: entries by day, total time, time by tag
 - Export a week to Markdown
-- Export a report outline built from a template (the ENSPD structure by default, or your own school's)
+- Build the report outline from your daily logs, using a general report template (v1 ships the ENSPD one)
+- A dashboard on the Today page: hours this week, days logged in a row, time by tag, latest difficulties
 - Runs entirely on your laptop, no internet needed
 
 **Coming later:** a supervisor's side and a shared space (submitted weeks, comments, meeting requests), school tutor and organisation admin roles, dashboards for every role, an installable app that syncs.
@@ -41,7 +44,7 @@ flowchart LR
 
 ```bash
 git clone <repository-url>
-cd internship-log-report-helper
+cd jotern   # or the folder name you cloned into
 cp api/.env.example api/.env
 npm install            # root: installs the script runner
 npm run install:all    # installs api/ and web/
@@ -57,17 +60,18 @@ api/     Express API (JavaScript)
 web/     Angular app (TypeScript)
 docs/
   uml/     UML diagrams (Gaphor files and exports)
-  design/  Figma exports and the prototype link
+  design/  Figma exports, the prototype link and the brand kit
 ```
 
 ## Design and models
 
 - Figma prototype: <!-- link -->
 - UML diagrams: [`docs/uml/`](docs/uml/)
+- Brand kit: [`docs/design/brand/`](docs/design/brand/)
 
 ## How it's built
 
-Designed in Figma and modeled in UML before coding. At least 70% of the code is written by hand (and at least 60% of each technology's); commits containing AI-written code carry an `Assisted-by: AI` trailer, and CLI-generated code a `Generated-by: scaffold` trailer.
+Designed in Figma and modeled in UML before coding. At least 70% of the code is written by hand (and at least 60% of each technology's); CLI-generated code is committed with a `Generated-by: scaffold` trailer so it stays out of the count. The documentation and design files in `docs/` are not counted.
 
 ## Author
 

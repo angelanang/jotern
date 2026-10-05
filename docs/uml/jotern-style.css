@@ -1,0 +1,104 @@
+/* Jotern — Gaphor style sheet
+   Paste the whole file into Gaphor: select the diagram, open the Style tab
+   (or the style button, top right) and replace what's there.
+   Only properties from https://docs.gaphor.org/en/latest/style_sheets.html are used.
+   Colours from the Jotern identity: ink #1B2A5C, paper #F3F5FA,
+   highlighter #FFD84A, margin red #E5484D, pencil #6B7490. */
+
+/* ---------- 1. The canvas ---------- */
+diagram {
+  background-color: #FFFFFF;
+  /* line-style: sloppy 0.3; */   /* hand-drawn look: remove the comment marks to try it */
+}
+
+/* ---------- 2. Defaults for every item ---------- */
+* {
+  font-family: sans;              /* "Public Sans" once it's installed on the Dell */
+  font-size: 13;
+  color: #1B2A5C;                 /* lines and text: ink */
+  line-width: 2;
+}
+
+/* ---------- 3. Boxes ---------- */
+:is(class, datatype, enumeration, interface, package) {
+  background-color: #F3F5FA;      /* paper */
+  border-radius: 4;
+  padding: 6 10;
+}
+class * {
+  white-space: normal;            /* long attribute lines wrap */
+}
+:is(name, operation)[isabstract]::after {
+  content: " {abstract}";
+}
+
+/* ---------- 4. Use case diagram ---------- */
+usecase {
+  background-color: #FFF4C2;      /* a light highlighter tint */
+}
+actor {
+  font-weight: bold;
+}
+/* Later scope, greyed out: name Later use cases "L-xx ..." and Later actors "... (Later)" */
+usecase[name^="L-"],
+actor[name$="(Later)"] {
+  color: #9EA8CB;
+  background-color: #F3F5FA;
+  font-style: italic;
+}
+:is(include, extend) {
+  dash-style: 7 5;
+}
+
+/* ---------- 5. Sequence diagram ---------- */
+lifeline {
+  background-color: #F3F5FA;
+}
+message {
+  font-size: 12;
+}
+
+/* ---------- 6. Activity diagram ---------- */
+controlflow {
+  dash-style: 0;                  /* solid, as UML wants */
+}
+
+/* ---------- 7. Comments ---------- */
+comment {
+  background-color: #FFD84A;      /* highlighter, like a sticky note */
+  font-size: 12;
+}
+comment[body^="TODO"] {
+  background-color: #E5484D;
+  color: #FFFFFF;
+}
+
+/* ---------- 8. Checks while drawing ---------- */
+/* A relationship that isn't connected to anything turns red */
+:not(:is(:root, line, box, ellipse, commentline))[subject=""] {
+  color: #E5484D;
+}
+/* The selected item stands out */
+:focus {
+  color: #E5484D;
+}
+
+/* ---------- 9. Dark editor (exports always use the light version) ---------- */
+@media dark-mode {
+  diagram {
+    background-color: #0D1330;
+  }
+  * {
+    color: #EDF0FA;
+  }
+  :is(class, datatype, enumeration, interface, package, lifeline) {
+    background-color: #162044;
+  }
+  usecase {
+    background-color: #2B376A;
+  }
+  comment {
+    background-color: #FFD84A;
+    color: #1B2A5C;
+  }
+}

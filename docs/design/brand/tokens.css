@@ -1,0 +1,37 @@
+/* Jotern design tokens. Identity v1, October 2026.
+   Paste into web/src/styles.css. Brand colours stay fixed; theme tokens follow the system setting. */
+:root {
+  /* Brand */
+  --jt-ink: #1B2A5C;
+  --jt-paper: #F3F5FA;
+  --jt-highlighter: #FFD84A;
+  --jt-margin-red: #E5484D;
+  --jt-pencil: #6B7490;
+
+  /* Theme */
+  --jt-bg: #F3F5FA;
+  --jt-surface: #FFFFFF;
+  --jt-text: #16204A;
+  --jt-muted: #5A6485;
+  --jt-line: #D5DAEA;
+
+  /* Type */
+  --jt-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --jt-body: "Public Sans", system-ui, sans-serif;
+  --jt-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Type scale (px) */
+  --jt-size-display: 48px;
+  --jt-size-heading: 28px;
+  --jt-size-body: 16px;
+  --jt-size-label: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --jt-bg: #0D1330;
+    --jt-surface: #162044;
+    --jt-text: #EDF0FA;
+    --jt-muted: #9EA8CB;
+    --jt-line: #2B376A;
+  }
+}
