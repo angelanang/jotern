@@ -1,0 +1,18 @@
+# REST Client (VS Code): click "Send Request" above each request.
+# Add one block per route as you write the API contract.
+
+@baseUrl = http://localhost:3000/api
+
+### Example: list entries (adjust once the route exists)
+GET {{baseUrl}}/entries
+
+### Example: create an entry (adjust to your contract)
+POST {{baseUrl}}/entries
+Content-Type: application/json
+
+{
+  "date": "2026-10-04",
+  "text": "Set up the Express API",
+  "minutes": 90,
+  "tags": ["Development"]
+}

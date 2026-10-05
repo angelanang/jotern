@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Environment (never commit secrets; .env.example is committed instead)
+.env
+.env.*
+!.env.example
+
+# Builds and caches
+dist/
+.angular/
+coverage/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
