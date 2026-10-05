@@ -1,0 +1,29 @@
+@startuml
+!include skin.iuml
+autonumber
+actor "Intern" as I
+box "Presentation (Angular)"
+participant ":WeekPage" as W
+participant ":WeeksService" as S
+end box
+box "Business logic (Express)"
+participant ":WeeksRoute" as R
+participant ":WeeksController" as K
+end box
+box "Data access (Mongoose · MongoDB)"
+participant ":LogEntry" as M
+database "MongoDB" as DB
+end box
+I -> W : clicks "Export week"
+W -> S : exportWeek("2026-W41")
+S -> R : GET /api/weeks/2026-W41/export
+R -> K : export(req, res)
+K -> M : find entries, Monday to Sunday
+M -> DB : find({ date: { $gte, $lt } })
+DB --> M : entries
+M --> K : entries
+K -> K : build WeekSummary, then Markdown
+K --> S : 200 text/markdown (week-41.md)
+S --> W : file
+W --> I : download + "Week 41 exported to Markdown."
+@enduml

@@ -1,0 +1,36 @@
+skinparam defaultFontName "Public Sans"
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam roundCorner 8
+skinparam ArrowColor #1B2A5C
+skinparam ArrowThickness 1.4
+skinparam BackgroundColor #FFFFFF
+skinparam ActorBorderColor #1B2A5C
+skinparam ActorBackgroundColor #FFD84A
+skinparam ActorFontStyle bold
+skinparam UsecaseBorderColor #1B2A5C
+skinparam UsecaseBackgroundColor #FFF4C2
+skinparam UsecaseFontColor #16204A
+skinparam RectangleBorderColor #1B2A5C
+skinparam RectangleBackgroundColor #FFFFFF
+skinparam RectangleFontStyle bold
+skinparam ClassBorderColor #1B2A5C
+skinparam ClassBackgroundColor #F3F5FA
+skinparam ClassHeaderBackgroundColor #FFD84A
+skinparam ClassFontStyle bold
+skinparam ClassAttributeIconSize 0
+skinparam NoteBorderColor #1B2A5C
+skinparam NoteBackgroundColor #FFF4C2
+skinparam NoteFontSize 11
+skinparam SequenceLifeLineBorderColor #6B7490
+skinparam ParticipantBorderColor #1B2A5C
+skinparam ParticipantBackgroundColor #F3F5FA
+skinparam SequenceGroupBorderColor #6B7490
+skinparam SequenceGroupHeaderFontColor #1B2A5C
+skinparam SequenceBoxBorderColor #D5DAEA
+skinparam SequenceBoxBackgroundColor #FAFBFE
+skinparam SequenceBoxFontStyle bold
+skinparam ParticipantPadding 12
+skinparam BoxPadding 8
+hide stereotype
+hide circle

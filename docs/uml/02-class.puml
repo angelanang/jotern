@@ -1,0 +1,45 @@
+@startuml
+!include skin.iuml
+class Internship {
+  + company : String
+  + supervisorName : String
+  + school : String
+  + startDate : Date
+  + endDate : Date
+  + tags : String [0..*]
+  --
+  + weekSummary(weekStart : Date) : WeekSummary
+  + buildReportOutline() : String
+}
+class LogEntry {
+  + date : Date
+  + text : String
+  + minutes : Integer {1..1440}
+  + tags : String [0..*]
+  + difficulty : String [0..1]
+  + solution : String [0..1]
+  + learned : String [0..1]
+  + position : String [0..1]
+}
+class ReportTemplate {
+  + name : String
+  + school : String
+  + body : String
+  + isDefault : Boolean
+}
+class WeekSummary <<computed>> {
+  + weekStart : Date
+  + totalMinutes : Integer
+  + minutesByTag : Map<String, Integer>
+  + daysLoggedInARow : Integer
+  --
+  + toMarkdown() : String
+}
+Internship "1" *-- "0..*" LogEntry : has >
+Internship "0..*" --> "1" ReportTemplate : uses >
+Internship ..> WeekSummary : computes >
+note right of WeekSummary : Computed by the API from the entries;\nnever stored. «computed»
+note bottom of LogEntry : One day totals 24 h at most (NF-08).\nposition: for the ENSPD report "par poste" (D-15).
+note top of ReportTemplate : v1 ships ENSPD's template:\nMarkdown with placeholders (CR-07).
+note left of Internship : tags: seeded with the ten defaults,\nrenamable per internship (D-15).
+@enduml

@@ -1,0 +1,36 @@
+@startuml
+!include skin.iuml
+autonumber
+actor "Intern" as I
+box "Presentation (Angular)"
+participant ":TodayPage" as C
+participant ":EntriesService" as S
+end box
+box "Business logic (Express)"
+participant ":EntriesRoute" as R
+participant ":EntriesController" as K
+end box
+box "Data access (Mongoose · MongoDB)"
+participant ":LogEntry" as M
+database "MongoDB" as DB
+end box
+I -> C : fills the form, clicks "Jot today"
+C -> S : create(entry)
+S -> R : POST /api/entries (JSON)
+R -> K : create(req, res)
+K -> M : LogEntry.create(body)
+M -> M : validate (date, text, minutes 1–1440)
+alt valid
+  M -> DB : insertOne
+  DB --> M : saved document
+  M --> K : entry
+  K --> S : 201 Created + entry
+  S --> C : entry
+  C --> I : entry listed, dashboard updated
+else invalid
+  M --> K : ValidationError
+  K --> S : 400 { message, field }
+  S --> C : error
+  C --> I : "Add the time spent so the week adds up."
+end
+@enduml

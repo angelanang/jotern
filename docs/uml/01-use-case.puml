@@ -1,0 +1,42 @@
+@startuml
+!include skin.iuml
+skinparam UsecaseBackgroundColor<<later>> #F3F5FA
+skinparam UsecaseBorderColor<<later>> #9EA8CB
+skinparam UsecaseFontColor<<later>> #6B7490
+skinparam ActorBackgroundColor<<later>> #F3F5FA
+skinparam ActorBorderColor<<later>> #9EA8CB
+skinparam ActorFontColor<<later>> #6B7490
+left to right direction
+actor "Intern\n(Stagiaire)" as I
+rectangle "Jotern — v1" {
+  usecase "US-05 Set up my internship" as U5
+  usecase "US-01 Log today's work" as U1
+  usecase "US-02 Edit or delete an entry" as U2
+  usecase "US-10 See my dashboard\n(on the Today page)" as U10
+  usecase "US-06 See a week" as U6
+  usecase "US-07 Export a week to Markdown" as U7
+  usecase "US-08 Build the report outline\n(ENSPD template)" as U8
+  usecase "US-04 Tag an entry" as U4
+  usecase "US-03 Note a difficulty,\nsolution, lesson" as U3
+}
+rectangle "Later" {
+  usecase "L-14 See my interns'\nsubmitted weeks" as L14 <<later>>
+  usecase "L-15 Comment on a week" as L15 <<later>>
+  usecase "L-17 Read the report outline" as L17 <<later>>
+}
+actor "Supervisor (Later)\n(Encadrant)" as S <<later>>
+actor "School tutor (Later)\n(Tuteur d'école)" as T <<later>>
+I -- U5
+I -- U1
+I -- U2
+I -- U10
+I -- U6
+I -- U7
+I -- U8
+U1 ..> U4 : <<include>>
+U1 <.. U3 : <<extend>>
+L14 -- S
+L15 -- S
+L17 -- T
+note "US-11: everything works with no internet\n(Angular, Express, MongoDB on the laptop)" as N1
+@enduml

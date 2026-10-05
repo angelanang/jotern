@@ -1,17 +1,18 @@
 # UML
 
-Drawn by hand in [Gaphor](https://gaphor.org). The Mermaid versions below are the **reference sketches** to redraw from; the Gaphor model is the real deliverable.
+The diagrams are written in PlantUML (`*.puml`, shared look in `skin.iuml`) and exported as PNG, SVG and one PDF. The Mermaid versions below are quick previews that render on GitHub.
 
 | File | What |
 |---|---|
-| `jotern.gaphor` | The Gaphor model: every diagram lives in this one file |
-| `jotern-style.css` | The style sheet pasted into the model (Jotern colours, Later scope greyed out) |
-| `01-use-case.png` / `.svg` | Use case diagram |
-| `02-class.png` / `.svg` | Class diagram |
-| `03-sequence-add-entry.png` / `.svg` | Sequence: add an entry |
-| `04-sequence-export-week.png` / `.svg` | Sequence: export a week |
+| `jotern-uml.pdf` | The four diagrams in one PDF, bilingual titles |
+| `01-use-case.puml` / `.png` / `.svg` | Use case diagram |
+| `02-class.puml` / `.png` / `.svg` | Class diagram |
+| `03-sequence-add-entry.puml` / `.png` / `.svg` | Sequence: add an entry |
+| `04-sequence-export-week.puml` / `.png` / `.svg` | Sequence: export a week |
+| `skin.iuml` | The Jotern colours and fonts for PlantUML |
+| `jotern-style.css` | The same look as a Gaphor style sheet |
 
-Export from Gaphor with **File → Export** (PNG for the README and slides, SVG to keep it sharp).
+Regenerate: `java -jar plantuml.jar -tsvg docs/uml/*.puml` (and `-tpng` for the PNGs).
 
 ## 1. Use case (v1 in colour, Later greyed out)
 

@@ -1,0 +1,56 @@
+<header class="page-header week-header">
+  <div>
+    <div class="kicker">WEEKLY LOG</div>
+    <div class="title-with-arrows">
+      <button type="button" aria-label="Previous week"><app-icon name="arrow-left" /></button>
+      <h1>Week 41 · 5 to 9 Oct 2026</h1>
+      <button type="button" aria-label="Next week"><app-icon name="arrow-right" /></button>
+    </div>
+  </div>
+  <div class="header-actions">
+    <a class="button secondary" routerLink="/report">Build report outline</a>
+    <button type="button" class="button primary"><app-icon name="download" [size]="17" /> Export week</button>
+  </div>
+</header>
+
+<section class="card week-summary">
+  <div class="summary-total">
+    <span class="eyebrow">TOTAL THIS WEEK</span>
+    <strong>13h 15</strong>
+    <span>3 days logged</span>
+  </div>
+  <div class="summary-chart">
+    <div class="stacked-bar">
+      @for (row of timeByTag; track row.tag) {
+        <span class="stack" [style.width.%]="row.percent" [style.background]="row.color"></span>
+      }
+    </div>
+    <div class="legend">
+      @for (row of timeByTag; track row.tag) {
+        <span><i [style.background]="row.color"></i> {{ row.tag }} <b>{{ row.time }}</b></span>
+      }
+    </div>
+  </div>
+</section>
+
+<div class="week-grid">
+  @for (day of days; track day.day) {
+    <section class="day-column" [class.current]="day.day === 'Wed'">
+      <div class="day-heading">
+        <div><span>{{ day.day }}</span><small>{{ day.date }}</small></div>
+        <strong class="mono">{{ day.total }}</strong>
+      </div>
+      <div class="day-entries">
+        @for (entry of day.entries; track $index) {
+          <article class="compact-entry">
+            <time class="mono">{{ entry.time }}</time>
+            <p>{{ entry.text }}</p>
+            <span class="tag">{{ entry.tags[0] }}</span>
+          </article>
+        } @empty {
+          <p class="day-empty">Not yet.</p>
+        }
+      </div>
+    </section>
+  }
+</div>
