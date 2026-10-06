@@ -80,3 +80,7 @@ Designed in Figma and modeled in UML before coding. All of the app's code on `ma
 ## Author
 
 Find me on [GitHub](https://github.com/angelanang)
+
+## License
+
+[MIT](LICENSE) © 2026 Angela Nang. The licence covers the code; the Jotern name and the brand kit in `docs/design/brand/` aren't included.
