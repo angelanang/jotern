@@ -8,6 +8,8 @@
 
 <!-- Screenshot of the dashboard or the week view goes here (demo data only) -->
 
+![Dashboard screen](docs/design/01-today.png)
+
 ## What it does (v1)
 
 - Log each day: what I did, time spent, tags, difficulties, how I solved them, what I learned
@@ -29,10 +31,10 @@ flowchart LR
     UI -. "exports" .-> MD["Markdown files"]
 ```
 
-| Part | Stack |
-|---|---|
+| Part         | Stack                          |
+| ------------ | ------------------------------ |
 | App (`web/`) | Angular, TypeScript, HTML, CSS |
-| Data | The browser's `localStorage` |
+| Data         | The browser's `localStorage`   |
 
 ## Requirements
 
@@ -67,7 +69,7 @@ docs/
 
 ## Design and models
 
-- Figma prototype: <!-- link -->
+- Figma prototype: [To Figma](https://rise-liver-98085590.figma.site)
 - UML diagrams: [`docs/uml/`](docs/uml/)
 - Brand kit: [`docs/design/brand/`](docs/design/brand/)
 
@@ -77,8 +79,4 @@ Designed in Figma and modeled in UML before coding. All of the app's code on `ma
 
 ## Author
 
-Angela — <!-- GitHub / LinkedIn link -->
-
-## License
-
-<!-- To decide (MIT is the usual choice for a portfolio project) -->
+Find me on [GitHub](https://github.com/angelanang)
