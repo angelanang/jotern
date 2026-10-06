@@ -15,40 +15,38 @@
 - Export a week to Markdown
 - Build the report outline from your daily logs, using a general report template (v1 ships the ENSPD one)
 - A dashboard on the Today page: hours this week, days logged in a row, time by tag, latest difficulties
-- Runs entirely on your laptop, no internet needed
+- Runs entirely on your laptop, no internet needed: your entries stay in your browser
 
-**Coming later:** a supervisor's side and a shared space (submitted weeks, comments, meeting requests), school tutor and organisation admin roles, dashboards for every role, an installable app that syncs.
+**Coming later:** a backend (an API and a database), a supervisor's side and a shared space (submitted weeks, comments, meeting requests), school tutor and organisation admin roles, dashboards for every role, an installable app that syncs.
 
 ## Architecture
 
+v1 is a frontend-only Angular app: no server, no database. The entries are kept in the browser's `localStorage` on your laptop.
+
 ```mermaid
 flowchart LR
-    NG["Angular app<br/>localhost:4200"] -- "HTTP + JSON" --> EX["Express API<br/>localhost:3000"]
-    EX --> MG["Mongoose"] --> DB[("MongoDB<br/>localhost:27017")]
+    UI["Pages<br/>Today · Week · Report · Setup"] --> ST["Entries store<br/>(Angular service, signals)"] --> LS[("localStorage")]
+    UI -. "exports" .-> MD["Markdown files"]
 ```
 
 | Part | Stack |
 |---|---|
-| Front end (`web/`) | Angular, TypeScript, HTML, CSS |
-| API (`api/`) | Node.js, Express, JavaScript |
-| Database | MongoDB with Mongoose |
+| App (`web/`) | Angular, TypeScript, HTML, CSS |
+| Data | The browser's `localStorage` |
 
 ## Requirements
 
 - Node.js LTS (see `.nvmrc`; with nvm: `nvm use`)
-- MongoDB Community Server running on `localhost:27017`
 
 ## How to run
 
-<!-- Fill in once api/ and web/ exist -->
+<!-- Fill in once web/ exists -->
 
 ```bash
-git clone <repository-url>
-cd jotern   # or the folder name you cloned into
-cp api/.env.example api/.env
-npm install            # root: installs the script runner
-npm run install:all    # installs api/ and web/
-npm run dev            # starts the API and the Angular app
+git clone https://github.com/angelanang/jotern.git
+cd jotern/web
+npm install
+npm start
 ```
 
 Then open http://localhost:4200.
@@ -56,12 +54,16 @@ Then open http://localhost:4200.
 ## Repository layout
 
 ```
-api/     Express API (JavaScript)
 web/     Angular app (TypeScript)
 docs/
   uml/     UML diagrams (Gaphor files and exports)
   design/  Figma exports, the prototype link and the brand kit
 ```
+
+## Branches
+
+- `main`: the app, written by hand.
+- `ai-made`: an earlier AI-assisted version of the interface, kept for reference; not maintained.
 
 ## Design and models
 
@@ -71,7 +73,7 @@ docs/
 
 ## How it's built
 
-Designed in Figma and modeled in UML before coding. At least 70% of the code is written by hand (and at least 60% of each technology's); CLI-generated code is committed with a `Generated-by: scaffold` trailer so it stays out of the count. The documentation and design files in `docs/` are not counted.
+Designed in Figma and modeled in UML before coding. All of the app's code on `main` is written by hand; CLI-generated code (`ng new`, `ng generate`) is committed with a `Generated-by: scaffold` trailer so it stays out of the count. The documentation and design files in `docs/` are not counted.
 
 ## Author
 

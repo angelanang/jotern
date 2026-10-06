@@ -1,5 +1,7 @@
 # UML
 
+> **Note (2026-10-06):** v1 is frontend only. The sequence diagrams below still show the API and MongoDB of the full-stack plan; that backend comes later. In v1, the same steps happen inside the app, with the entries saved to `localStorage`.
+
 The diagrams are written in PlantUML (`*.puml`, shared look in `skin.iuml`) and exported as PNG, SVG and one PDF. The Mermaid versions below are quick previews that render on GitHub.
 
 | File | What |

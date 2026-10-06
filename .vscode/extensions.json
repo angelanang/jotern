@@ -3,8 +3,6 @@
     "angular.ng-template",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "mongodb.mongodb-vscode",
-    "humao.rest-client",
     "bierner.markdown-mermaid"
   ]
 }
