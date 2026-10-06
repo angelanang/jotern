@@ -1,0 +1,40 @@
+.sidebar {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  background-color: #fff;
+  border-right: 1px solid #eee;
+  padding: 1rem;
+}
+
+.brand {
+  display: block;
+}
+
+.logo {
+  display: block;
+  height: 70px;
+}
+
+.nav {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  color: #6b7490;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  border-radius: 4px;
+}
+
+.nav-link.active {
+  background-color: #ffd84a;
+  color: #1b2a5c;
+}

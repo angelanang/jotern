@@ -1,1 +1,129 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*General*/
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /*Brand Identity*/
+  /* Brand */
+  --jt-ink: #1b2a5c;
+  --jt-paper: #f3f5fa;
+  --jt-highlighter: #ffd84a;
+  --jt-margin-red: #e5484d;
+  --jt-pencil: #6b7490;
+
+  /* Theme */
+  --jt-bg: #f3f5fa;
+  --jt-surface: #ffffff;
+  --jt-text: #16204a;
+  --jt-muted: #5a6485;
+  --jt-line: #d5daea;
+
+  /* Type */
+  --jt-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --jt-body: 'Public Sans', system-ui, sans-serif;
+  --jt-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /*Icons*/
+  /* Sizes */
+  --jt-icon-size: 18px; /* default, as in the prototype */
+  --jt-icon-size-sm: 16px;
+  --jt-icon-size-lg: 24px; /* the files' own size */
+
+  /* Files */
+  --jt-icon-today: url('today.svg');
+  --jt-icon-week: url('week.svg');
+  --jt-icon-report: url('report.svg');
+  --jt-icon-setup: url('setup.svg');
+  --jt-icon-chevron: url('chevron.svg');
+  --jt-icon-edit: url('edit.svg');
+  --jt-icon-delete: url('delete.svg');
+  --jt-icon-download: url('download.svg');
+  --jt-icon-plus: url('plus.svg');
+  --jt-icon-arrow-left: url('arrow-left.svg');
+  --jt-icon-arrow-right: url('arrow-right.svg');
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --jt-bg: #0d1330;
+    --jt-surface: #162044;
+    --jt-text: #edf0fa;
+    --jt-muted: #9ea8cb;
+    --jt-line: #2b376a;
+  }
+}
+
+/*Icons*/
+
+.jt-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  width: var(--jt-icon-size);
+  height: var(--jt-icon-size);
+  background-color: currentColor;
+  -webkit-mask: var(--jt-icon) center / contain no-repeat;
+  mask: var(--jt-icon) center / contain no-repeat;
+  vertical-align: middle;
+}
+.jt-icon--sm {
+  --jt-icon-size: var(--jt-icon-size-sm);
+}
+.jt-icon--lg {
+  --jt-icon-size: var(--jt-icon-size-lg);
+}
+
+.jt-icon--today {
+  --jt-icon: var(--jt-icon-today);
+}
+.jt-icon--week {
+  --jt-icon: var(--jt-icon-week);
+}
+.jt-icon--report {
+  --jt-icon: var(--jt-icon-report);
+}
+.jt-icon--setup {
+  --jt-icon: var(--jt-icon-setup);
+}
+.jt-icon--chevron {
+  --jt-icon: var(--jt-icon-chevron);
+}
+.jt-icon--edit {
+  --jt-icon: var(--jt-icon-edit);
+}
+.jt-icon--delete {
+  --jt-icon: var(--jt-icon-delete);
+}
+.jt-icon--download {
+  --jt-icon: var(--jt-icon-download);
+}
+.jt-icon--plus {
+  --jt-icon: var(--jt-icon-plus);
+}
+.jt-icon--arrow-left {
+  --jt-icon: var(--jt-icon-arrow-left);
+}
+.jt-icon--arrow-right {
+  --jt-icon: var(--jt-icon-arrow-right);
+}
+
+/*Fonts*/
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf')
+    format('truetype');
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+/*Content*/
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--jt-paper);
+}
