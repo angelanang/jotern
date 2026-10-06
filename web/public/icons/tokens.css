@@ -1,0 +1,49 @@
+/* Jotern icon tokens. The 11 icons of the corrected prototype, October 2026.
+   The SVG files draw in currentColor, which an <img> can't pick up from the page.
+   These classes paint each icon as a CSS mask instead, so it takes the colour of the text around it.
+   Load once, in web/src/index.html: <link rel="stylesheet" href="icons/tokens.css">
+   Use: <span class="jt-icon jt-icon--today" aria-hidden="true"></span> */
+:root {
+  /* Sizes */
+  --jt-icon-size: 18px;      /* default, as in the prototype */
+  --jt-icon-size-sm: 16px;
+  --jt-icon-size-lg: 24px;   /* the files' own size */
+
+  /* Files */
+  --jt-icon-today: url("today.svg");
+  --jt-icon-week: url("week.svg");
+  --jt-icon-report: url("report.svg");
+  --jt-icon-setup: url("setup.svg");
+  --jt-icon-chevron: url("chevron.svg");
+  --jt-icon-edit: url("edit.svg");
+  --jt-icon-delete: url("delete.svg");
+  --jt-icon-download: url("download.svg");
+  --jt-icon-plus: url("plus.svg");
+  --jt-icon-arrow-left: url("arrow-left.svg");
+  --jt-icon-arrow-right: url("arrow-right.svg");
+}
+
+.jt-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  width: var(--jt-icon-size);
+  height: var(--jt-icon-size);
+  background-color: currentColor;
+  -webkit-mask: var(--jt-icon) center / contain no-repeat;
+  mask: var(--jt-icon) center / contain no-repeat;
+  vertical-align: middle;
+}
+.jt-icon--sm { --jt-icon-size: var(--jt-icon-size-sm); }
+.jt-icon--lg { --jt-icon-size: var(--jt-icon-size-lg); }
+
+.jt-icon--today { --jt-icon: var(--jt-icon-today); }
+.jt-icon--week { --jt-icon: var(--jt-icon-week); }
+.jt-icon--report { --jt-icon: var(--jt-icon-report); }
+.jt-icon--setup { --jt-icon: var(--jt-icon-setup); }
+.jt-icon--chevron { --jt-icon: var(--jt-icon-chevron); }
+.jt-icon--edit { --jt-icon: var(--jt-icon-edit); }
+.jt-icon--delete { --jt-icon: var(--jt-icon-delete); }
+.jt-icon--download { --jt-icon: var(--jt-icon-download); }
+.jt-icon--plus { --jt-icon: var(--jt-icon-plus); }
+.jt-icon--arrow-left { --jt-icon: var(--jt-icon-arrow-left); }
+.jt-icon--arrow-right { --jt-icon: var(--jt-icon-arrow-right); }
