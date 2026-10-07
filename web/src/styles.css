@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+/* jt stands for jotern */
 
 /*General*/
 
@@ -7,25 +7,31 @@
 }
 
 :root {
+  /* Text */
+  --jt-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --jt-body: 'Public Sans', system-ui, sans-serif;
+  --jt-mono: 'JetBrains Mono', ui-monospace, monospace;
+
   /*Brand Identity*/
+
   /* Brand */
+
+  /* Colors */
   --jt-ink: #1b2a5c;
   --jt-paper: #f3f5fa;
   --jt-highlighter: #ffd84a;
   --jt-margin-red: #e5484d;
   --jt-pencil: #6b7490;
 
-  /* Theme */
+  /* Theme: Light Mode */
   --jt-bg: #f3f5fa;
   --jt-surface: #ffffff;
   --jt-text: #16204a;
   --jt-muted: #5a6485;
   --jt-line: #d5daea;
+  --jt-logo: url('/brand/ink/jotern-icon-ink.svg');
 
-  /* Type */
-  --jt-display: 'Bricolage Grotesque', system-ui, sans-serif;
-  --jt-body: 'Public Sans', system-ui, sans-serif;
-  --jt-mono: 'JetBrains Mono', ui-monospace, monospace;
+  /* Dark Mode */
 
   /*Icons*/
   /* Sizes */
@@ -34,30 +40,22 @@
   --jt-icon-size-lg: 24px; /* the files' own size */
 
   /* Files */
-  --jt-icon-today: url('today.svg');
-  --jt-icon-week: url('week.svg');
-  --jt-icon-report: url('report.svg');
-  --jt-icon-setup: url('setup.svg');
-  --jt-icon-chevron: url('chevron.svg');
-  --jt-icon-edit: url('edit.svg');
-  --jt-icon-delete: url('delete.svg');
-  --jt-icon-download: url('download.svg');
-  --jt-icon-plus: url('plus.svg');
-  --jt-icon-arrow-left: url('arrow-left.svg');
-  --jt-icon-arrow-right: url('arrow-right.svg');
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --jt-bg: #0d1330;
-    --jt-surface: #162044;
-    --jt-text: #edf0fa;
-    --jt-muted: #9ea8cb;
-    --jt-line: #2b376a;
-  }
+  --jt-icon-today: url('/icons/today.svg');
+  --jt-icon-week: url('/icons/week.svg');
+  --jt-icon-report: url('/icons/report.svg');
+  --jt-icon-setup: url('/icons/setup.svg');
+  --jt-icon-chevron: url('/icons/chevron.svg');
+  --jt-icon-edit: url('/icons/edit.svg');
+  --jt-icon-delete: url('/icons/delete.svg');
+  --jt-icon-download: url('/icons/download.svg');
+  --jt-icon-plus: url('/icons/plus.svg');
+  --jt-icon-arrow-left: url('/icons/arrow-left.svg');
+  --jt-icon-arrow-right: url('/icons/arrow-right.svg');
 }
 
-/*Icons*/
+/* Icons */
 
+/* Global */
 .jt-icon {
   display: inline-block;
   flex-shrink: 0;
@@ -68,13 +66,14 @@
   mask: var(--jt-icon) center / contain no-repeat;
   vertical-align: middle;
 }
+/* Sizes */
 .jt-icon--sm {
   --jt-icon-size: var(--jt-icon-size-sm);
 }
 .jt-icon--lg {
   --jt-icon-size: var(--jt-icon-size-lg);
 }
-
+/* Element rules */
 .jt-icon--today {
   --jt-icon: var(--jt-icon-today);
 }
@@ -109,7 +108,7 @@
   --jt-icon: var(--jt-icon-arrow-right);
 }
 
-/*Fonts*/
+/* Fonts */
 
 @font-face {
   font-family: 'Bricolage Grotesque';
@@ -118,12 +117,85 @@
   font-weight: 200 800;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/fonts/Public_Sans/PublicSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-display: swap;
+}
 
-/*Content*/
+/* Content */
 
+/* Global */
 body {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  background-color: var(--jt-paper);
+
+  font-family: var(--jt-body);
+  color: var(--jt-text);
+
+  background-color: var(--jt-bg);
+}
+
+/* Specific */
+
+/* Text */
+h1,
+h2 {
+  font-family: var(--jt-display);
+}
+
+h3,h4{
+  font-weight: 600;
+}
+
+h5,
+h6 {
+  font-weight: normal;
+}
+
+.text-muted,
+.label {
+  color: var(--jt-muted);
+}
+
+.text-mono {
+  font-family: var(--jt-mono);
+}
+
+/* Elements */
+
+article {
+  display: block;
+  position: relative;
+  width: 270px;
+  height: 150px;
+  padding: 1rem;
+  border: 1px solid var(--jt-line);
+  background-color: var(--jt-surface);
+}
+
+.card {
+  background-color: var(--jt-surface);
+}
+
+.label {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Extra, to be cautious */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
 }

@@ -5,18 +5,29 @@
   bottom: 0;
   left: 0;
   width: 200px;
-  background-color: #fff;
-  border-right: 1px solid #eee;
+  background-color: var(--jt-surface);
+  border-right: 1px solid var(--jt-line);
   padding: 1rem;
 }
 
 .brand {
-  display: block;
+  display:flex;
+  width: 80px;
+  height: 80px;
+  background: var(--jt-logo) no-repeat center / contain;
 }
 
-.logo {
-  display: block;
-  height: 70px;
+.line {
+  width: 150px;
+  height: 1px;
+  background-color: var(--jt-line);
+}
+
+.connection-status {
+  width: 5px;
+  height: 5px;
+  background-color: var(--jt-margin-red);
+  border-radius: 50%;
 }
 
 .nav {
@@ -26,7 +37,7 @@
 }
 
 .nav-link {
-  color: #6b7490;
+  color: var(--jt-muted);
   font-weight: 500;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -35,6 +46,10 @@
 }
 
 .nav-link.active {
-  background-color: #ffd84a;
-  color: #1b2a5c;
+  background-color: var(--jt-highlighter);
+  color: var(--jt-ink);
+}
+
+.nav-icon {
+  display: block;
 }

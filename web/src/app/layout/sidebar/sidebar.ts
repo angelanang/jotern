@@ -13,22 +13,22 @@ export class Sidebar {
     {
       link: '/today',
       label: 'Today',
-      icon: '',
+      icon: 'today',
     },
     {
       link: '/week',
       label: 'Week',
-      icon: '',
+      icon: 'week',
     },
     {
       link: '/report',
       label: 'Report',
-      icon: '',
+      icon: 'report',
     },
     {
       link: '/setup',
       label: 'Setup',
-      icon: '',
+      icon: 'setup',
     },
   ];
 }

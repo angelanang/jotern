@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
 
-import { Today } from './today/today';
-import { Week } from './week/week';
-import { Report } from './report/report';
-import { Setup } from './setup/setup';
+import { Today } from './pages/today/today';
+import { Week } from './pages/week/week';
+import { Report } from './pages/report/report';
+import { Setup } from './pages/setup/setup';
 import { BaseLayout } from './layout/base-layout/base-layout';
 
 export const routes: Routes = [
