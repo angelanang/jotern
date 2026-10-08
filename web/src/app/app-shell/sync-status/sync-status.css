@@ -1,0 +1,17 @@
+.connection-status {
+  display: block;
+  position: fixed;
+  top: 600px;
+  bottom: 0px;
+  width: 220px;
+  background-color: var(--jt-surface);
+  border-right: 1px solid var(--jt-line);
+  padding: 28px 20px 24px;
+}
+
+.connection-status-marker {
+  width: 5px;
+  height: 5px;
+  background-color: var(--jt-margin-red);
+  border-radius: 50%;
+}

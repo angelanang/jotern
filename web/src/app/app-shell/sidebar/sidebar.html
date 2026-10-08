@@ -1,0 +1,17 @@
+<aside class="sidebar">
+  <div class="brand">
+    <a routerLink="/" class="logo"></a>
+    <span class="logo-word"></span>
+  </div>
+
+  <nav>
+    @for (page of PageLinks; track page.link) {
+      <a class="nav-link" [routerLink]="page.link" routerLinkActive="active">
+        <span class="nav-label">
+          <span class="nav-icon jt-icon" [class]="'jt-icon--' + page.icon"></span>
+          {{ page.label }}
+        </span>
+      </a>
+    }
+  </nav>
+</aside>

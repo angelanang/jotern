@@ -23,15 +23,19 @@
   --jt-margin-red: #e5484d;
   --jt-pencil: #6b7490;
 
-  /* Theme: Light Mode */
+  /* Theme */
+  /* Light Mode - Ink */
   --jt-bg: #f3f5fa;
   --jt-surface: #ffffff;
   --jt-text: #16204a;
   --jt-muted: #5a6485;
   --jt-line: #d5daea;
   --jt-logo: url('/brand/ink/jotern-icon-ink.svg');
+  --jt-logo-word: url('/brand/ink/jotern-wordmark-ink-light.svg');
 
-  /* Dark Mode */
+  /* Dark Mode - Highlighter */
+
+  /* Light Mode v2 - Paper */
 
   /*Icons*/
   /* Sizes */
@@ -152,7 +156,8 @@ h2 {
   font-family: var(--jt-display);
 }
 
-h3,h4{
+h3,
+h4 {
   font-weight: 600;
 }
 
@@ -174,22 +179,37 @@ h6 {
 
 article {
   display: block;
-  position: relative;
-  width: 270px;
-  height: 150px;
+  width: fit-content;
+  height: fit-content;
   padding: 1rem;
   border: 1px solid var(--jt-line);
   background-color: var(--jt-surface);
-}
-
-.card {
-  background-color: var(--jt-surface);
+  border-radius: 2%;
 }
 
 .label {
   margin: 0;
   font-weight: 600;
   letter-spacing: 1px;
+}
+
+.line {
+  height: 1px;
+  background-color: var(--jt-line);
+}
+
+.button {
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--jt-text);
+  border-radius: 5%;
+}
+
+.button-text {
+  color: var(--jt-paper);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  padding: 0.75rem;
 }
 
 /* Extra, to be cautious */

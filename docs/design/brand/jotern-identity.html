@@ -1,352 +1,1012 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Jotern Visual Identity</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=JetBrains+Mono:wght@400;600&family=Public+Sans:wght@400;500;600&display=swap">
-<style>
-/* Layout: one column of sections on a ruled-notebook motif (red margin line + blue rules), wordmark as the single loud moment. */
-:root {
-  /* Brand colors, fixed in both themes */
-  --ink: #1B2A5C;
-  --paper: #F3F5FA;
-  --hl: #FFD84A;
-  --red: #E5484D;
-  --pencil: #6B7490;
-  /* Theme tokens */
-  --bg: #F3F5FA;
-  --surface: #FFFFFF;
-  --text: #16204A;
-  --muted: #5A6485;
-  --line: #D5DAEA;
-  --rule: rgba(27, 42, 92, .08);
-  --margin: rgba(229, 72, 77, .55);
-  --focus: #1B2A5C;
-  /* Type */
-  --display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
-  --body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  /* Icon variant defaults */
-  --t: var(--ink); --s: var(--paper); --d: var(--hl);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0D1330; --surface: #162044; --text: #EDF0FA; --muted: #9EA8CB; --line: #2B376A;
-    --rule: rgba(237, 240, 250, .07); --margin: rgba(229, 72, 77, .6); --focus: #FFD84A;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0D1330; --surface: #162044; --text: #EDF0FA; --muted: #9EA8CB; --line: #2B376A;
-  --rule: rgba(237, 240, 250, .07); --margin: rgba(229, 72, 77, .6); --focus: #FFD84A;
-  color-scheme: dark;
-}
-* { box-sizing: border-box; }
-body {
-  background: var(--bg); color: var(--text);
-  font: 400 16px/1.6 var(--body);
-  padding-inline: 16px; padding-block: 24px 72px;
-}
-.wrap { max-width: 1040px; margin-inline: auto; display: flex; flex-direction: column; gap: 72px; }
-h1, h2, h3, p { margin: 0; }
-h2 { font: 800 clamp(28px, 5vw, 40px)/1.1 var(--display); letter-spacing: -0.02em; text-wrap: balance; }
-h3 { font: 600 15px/1.3 var(--body); }
-.eyebrow { font: 600 12px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-.lede { color: var(--muted); max-width: 62ch; }
-.sec { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
-.sec-head { display: flex; flex-direction: column; gap: 10px; }
-:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <style>
+      :root {
+        color-scheme: light;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      html {
+        scroll-padding-top: env(safe-area-inset-top, 0px);
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font:
+          14px -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: #faf9f5;
+        color: #141413;
+      }
+      img {
+        max-width: 100%;
+      }
+      [hidden]:not([hidden='until-found' i]) {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <title>Jotern Visual Identity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=JetBrains+Mono:wght@400;600&family=Public+Sans:wght@400;500;600&display=swap"
+    />
+    <style>
+      /* Layout: one column of sections on a ruled-notebook motif (red margin line + blue rules), wordmark as the single loud moment. */
+      :root {
+        /* Brand colors, fixed in both themes */
+        --ink: #1b2a5c;
+        --paper: #f3f5fa;
+        --hl: #ffd84a;
+        --red: #e5484d;
+        --pencil: #6b7490;
+        /* Theme tokens */
+        --bg: #f3f5fa;
+        --surface: #ffffff;
+        --text: #16204a;
+        --muted: #5a6485;
+        --line: #d5daea;
+        --rule: rgba(27, 42, 92, 0.08);
+        --margin: rgba(229, 72, 77, 0.55);
+        --focus: #1b2a5c;
+        /* Type */
+        --display: 'Bricolage Grotesque', 'Trebuchet MS', system-ui, sans-serif;
+        --body: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+        --mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+        /* Icon variant defaults */
+        --t: var(--ink);
+        --s: var(--paper);
+        --d: var(--hl);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme='light']) {
+          --bg: #0d1330;
+          --surface: #162044;
+          --text: #edf0fa;
+          --muted: #9ea8cb;
+          --line: #2b376a;
+          --rule: rgba(237, 240, 250, 0.07);
+          --margin: rgba(229, 72, 77, 0.6);
+          --focus: #ffd84a;
+          color-scheme: dark;
+        }
+      }
+      :root[data-theme='dark'] {
+        --bg: #0d1330;
+        --surface: #162044;
+        --text: #edf0fa;
+        --muted: #9ea8cb;
+        --line: #2b376a;
+        --rule: rgba(237, 240, 250, 0.07);
+        --margin: rgba(229, 72, 77, 0.6);
+        --focus: #ffd84a;
+        color-scheme: dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font: 400 16px/1.6 var(--body);
+        padding-inline: 16px;
+        padding-block: 24px 72px;
+      }
+      .wrap {
+        max-width: 1040px;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      h2 {
+        font: 800 clamp(28px, 5vw, 40px)/1.1 var(--display);
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+      }
+      h3 {
+        font: 600 15px/1.3 var(--body);
+      }
+      .eyebrow {
+        font: 600 12px/1 var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .lede {
+        color: var(--muted);
+        max-width: 62ch;
+      }
+      .sec {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        min-width: 0;
+      }
+      .sec-head {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      :focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 3px;
+      }
 
-/* Ruled notebook motif */
-.ruled {
-  --m: clamp(36px, 9vw, 76px);
-  background:
-    linear-gradient(90deg, transparent calc(var(--m) - 14px), var(--margin) calc(var(--m) - 14px) calc(var(--m) - 12px), transparent calc(var(--m) - 12px)),
-    repeating-linear-gradient(to bottom, transparent 0 31px, var(--rule) 31px 32px),
-    var(--surface);
-  border: 1px solid var(--line); border-radius: 6px;
-  padding-left: var(--m);
-}
+      /* Ruled notebook motif */
+      .ruled {
+        --m: clamp(36px, 9vw, 76px);
+        background:
+          linear-gradient(
+            90deg,
+            transparent calc(var(--m) - 14px),
+            var(--margin) calc(var(--m) - 14px) calc(var(--m) - 12px),
+            transparent calc(var(--m) - 12px)
+          ),
+          repeating-linear-gradient(to bottom, transparent 0 31px, var(--rule) 31px 32px),
+          var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding-left: var(--m);
+      }
 
-/* Hero */
-.hero { padding: 40px 20px 36px 0; display: flex; flex-direction: column; gap: 20px; }
-.word {
-  font: 800 clamp(64px, 17vw, 176px)/.95 var(--display);
-  letter-spacing: -0.045em; color: var(--text);
-  display: flex; align-items: baseline; flex-wrap: wrap;
-}
-.word .hl {
-  color: var(--ink);
-  background: linear-gradient(transparent 52%, var(--hl) 52% 94%, transparent 94%);
-  padding-inline: .02em .04em; margin-right: .01em;
-}
-.tag { font: 500 clamp(18px, 3vw, 24px)/1.35 var(--display); max-width: 30ch; }
-.meta { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip { font: 600 12px/1 var(--mono); padding: 8px 10px; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--muted); }
+      /* Hero */
+      .hero {
+        padding: 40px 20px 36px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .word {
+        font: 800 clamp(64px, 17vw, 176px)/0.95 var(--display);
+        letter-spacing: -0.045em;
+        color: var(--text);
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+      }
+      .word .hl {
+        color: var(--ink);
+        background: linear-gradient(transparent 52%, var(--hl) 52% 94%, transparent 94%);
+        padding-inline: 0.02em 0.04em;
+        margin-right: 0.01em;
+      }
+      .tag {
+        font: 500 clamp(18px, 3vw, 24px)/1.35 var(--display);
+        max-width: 30ch;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chip {
+        font: 600 12px/1 var(--mono);
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        background: var(--bg);
+        color: var(--muted);
+      }
 
-/* Logo */
-.logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
-.tile { border: 1px solid var(--line); border-radius: 8px; background: var(--surface); padding: 20px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
-.stage { display: grid; place-items: center; min-height: 168px; border-radius: 6px; }
-.stage.on-paper { background: var(--paper); }
-.stage.on-ink { background: var(--ink); }
-.stage.on-hl { background: var(--hl); }
-.v-ink { --t: var(--ink); --s: var(--paper); --d: var(--hl); }
-.v-hl { --t: var(--hl); --s: var(--ink); --d: var(--red); }
-.v-paper { --t: var(--paper); --s: var(--ink); --d: var(--red); }
-.v-line { --t: transparent; --s: var(--paper); --d: var(--hl); }
-.note { color: var(--muted); font-size: 14px; }
-.lockup { display: flex; align-items: center; gap: 14px; }
-.lockup .wm { font: 800 44px/1 var(--display); letter-spacing: -0.04em; color: var(--paper); }
-.lockup .wm span { color: var(--ink); background: var(--hl); padding-inline: .05em; border-radius: 2px; }
-.on-paper .lockup .wm { color: var(--ink); }
-.sizes { display: flex; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
-.sizes figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; }
-.sizes figcaption { font: 400 12px/1 var(--mono); color: var(--muted); }
-.clear { position: relative; display: grid; place-items: center; padding: 28px; border: 1px dashed var(--pencil); border-radius: 4px; }
-.clear::after { content: "x"; position: absolute; top: 4px; left: 10px; font: 600 12px/1 var(--mono); color: var(--red); }
+      /* Logo */
+      .logo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 16px;
+      }
+      .tile {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        min-width: 0;
+      }
+      .stage {
+        display: grid;
+        place-items: center;
+        min-height: 168px;
+        border-radius: 6px;
+      }
+      .stage.on-paper {
+        background: var(--paper);
+      }
+      .stage.on-ink {
+        background: var(--ink);
+      }
+      .stage.on-hl {
+        background: var(--hl);
+      }
+      .v-ink {
+        --t: var(--ink);
+        --s: var(--paper);
+        --d: var(--hl);
+      }
+      .v-hl {
+        --t: var(--hl);
+        --s: var(--ink);
+        --d: var(--red);
+      }
+      .v-paper {
+        --t: var(--paper);
+        --s: var(--ink);
+        --d: var(--red);
+      }
+      .v-line {
+        --t: transparent;
+        --s: var(--paper);
+        --d: var(--hl);
+      }
+      .note {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .lockup {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .lockup .wm {
+        font: 800 44px/1 var(--display);
+        letter-spacing: -0.04em;
+        color: var(--paper);
+      }
+      .lockup .wm span {
+        color: var(--ink);
+        background: var(--hl);
+        padding-inline: 0.05em;
+        border-radius: 2px;
+      }
+      .on-paper .lockup .wm {
+        color: var(--ink);
+      }
+      .sizes {
+        display: flex;
+        align-items: flex-end;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .sizes figure {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+      .sizes figcaption {
+        font: 400 12px/1 var(--mono);
+        color: var(--muted);
+      }
+      .clear {
+        position: relative;
+        display: grid;
+        place-items: center;
+        padding: 28px;
+        border: 1px dashed var(--pencil);
+        border-radius: 4px;
+      }
+      .clear::after {
+        content: 'x';
+        position: absolute;
+        top: 4px;
+        left: 10px;
+        font: 600 12px/1 var(--mono);
+        color: var(--red);
+      }
 
-/* Color */
-.swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; }
-.sw { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); display: flex; flex-direction: column; min-width: 0; }
-.sw .chipbox { height: 108px; }
-.sw .info { padding: 14px; display: flex; flex-direction: column; gap: 4px; }
-.sw .name { font: 800 18px/1.1 var(--display); }
-.sw code, .code-inline { font: 400 13px/1.4 var(--mono); color: var(--muted); }
-.sw .role { font-size: 13px; color: var(--muted); }
-.copy { align-self: flex-start; margin-top: 6px; font: 600 12px/1 var(--mono); padding: 7px 10px; border-radius: 4px; border: 1px solid var(--line); background: var(--bg); color: var(--text); cursor: pointer; }
-.copy:hover { border-color: var(--text); }
-.pairs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-.pair { border-radius: 6px; padding: 16px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
-.pair b { font: 800 22px/1 var(--display); }
-.pair small { font: 400 12px/1.4 var(--mono); }
+      /* Color */
+      .swatches {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 16px;
+      }
+      .sw {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+      .sw .chipbox {
+        height: 108px;
+      }
+      .sw .info {
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .sw .name {
+        font: 800 18px/1.1 var(--display);
+      }
+      .sw code,
+      .code-inline {
+        font: 400 13px/1.4 var(--mono);
+        color: var(--muted);
+      }
+      .sw .role {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .copy {
+        align-self: flex-start;
+        margin-top: 6px;
+        font: 600 12px/1 var(--mono);
+        padding: 7px 10px;
+        border-radius: 4px;
+        border: 1px solid var(--line);
+        background: var(--bg);
+        color: var(--text);
+        cursor: pointer;
+      }
+      .copy:hover {
+        border-color: var(--text);
+      }
+      .pairs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+      }
+      .pair {
+        border-radius: 6px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        min-width: 0;
+      }
+      .pair b {
+        font: 800 22px/1 var(--display);
+      }
+      .pair small {
+        font: 400 12px/1.4 var(--mono);
+      }
 
-/* Type */
-.type-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-.spec { border: 1px solid var(--line); border-radius: 8px; background: var(--surface); padding: 20px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-.spec .big { font-size: 56px; line-height: 1; overflow-wrap: anywhere; }
-.f-display { font-family: var(--display); font-weight: 800; letter-spacing: -0.03em; }
-.f-body { font-family: var(--body); }
-.f-mono { font-family: var(--mono); }
-.scale { display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--line); padding-top: 14px; }
-.scale div { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
-.scale small { font: 400 12px/1 var(--mono); color: var(--muted); width: 92px; flex: none; }
+      /* Type */
+      .type-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 16px;
+      }
+      .spec {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-width: 0;
+      }
+      .spec .big {
+        font-size: 56px;
+        line-height: 1;
+        overflow-wrap: anywhere;
+      }
+      .f-display {
+        font-family: var(--display);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+      }
+      .f-body {
+        font-family: var(--body);
+      }
+      .f-mono {
+        font-family: var(--mono);
+      }
+      .scale {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-top: 1px solid var(--line);
+        padding-top: 14px;
+      }
+      .scale div {
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .scale small {
+        font: 400 12px/1 var(--mono);
+        color: var(--muted);
+        width: 92px;
+        flex: none;
+      }
 
-/* Voice */
-.voice { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-.line { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 18px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
-.line q { font: 500 20px/1.3 var(--display); quotes: none; }
-.principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-.principles div { display: flex; flex-direction: column; gap: 4px; padding-top: 12px; border-top: 3px solid var(--hl); }
+      /* Voice */
+      .voice {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+      }
+      .line {
+        border: 1px solid var(--line);
+        background: var(--surface);
+        border-radius: 8px;
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 0;
+      }
+      .line q {
+        font: 500 20px/1.3 var(--display);
+        quotes: none;
+      }
+      .principles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .principles div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding-top: 12px;
+        border-top: 3px solid var(--hl);
+      }
 
-/* Application */
-.apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; align-items: start; }
-.app { min-width: 0; padding: 20px 20px 24px 0; display: flex; flex-direction: column; gap: 14px; }
-.app .bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-.brandbar { display: flex; align-items: center; gap: 8px; font: 800 20px/1 var(--display); letter-spacing: -0.03em; }
-.pill { font: 600 11px/1 var(--mono); padding: 6px 8px; border-radius: 99px; background: var(--hl); color: var(--ink); }
-.field { display: flex; flex-direction: column; gap: 4px; }
-.field label { font: 600 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-.field .v { font-size: 15px; background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 8px 10px; min-height: 38px; }
-.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.btn { font: 600 14px/1 var(--body); padding: 12px 16px; border-radius: 4px; border: 2px solid var(--ink); background: var(--ink); color: var(--paper); cursor: default; }
-.btn.hl { background: var(--hl); color: var(--ink); border-color: var(--ink); }
-.btns { display: flex; gap: 8px; flex-wrap: wrap; }
-.offline { font: 400 12px/1.4 var(--mono); color: var(--muted); display: flex; align-items: center; gap: 8px; }
-.offline i { width: 8px; height: 8px; border-radius: 50%; background: var(--red); display: inline-block; flex: none; }
-pre.md { margin: 0; overflow-x: auto; font: 400 13px/1.7 var(--mono); background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 14px; color: var(--text); }
-pre.md .k { color: var(--red); }
-.ex { font: 600 11px/1 var(--mono); color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+      /* Application */
+      .apps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 16px;
+        align-items: start;
+      }
+      .app {
+        min-width: 0;
+        padding: 20px 20px 24px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .app .bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .brandbar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font: 800 20px/1 var(--display);
+        letter-spacing: -0.03em;
+      }
+      .pill {
+        font: 600 11px/1 var(--mono);
+        padding: 6px 8px;
+        border-radius: 99px;
+        background: var(--hl);
+        color: var(--ink);
+      }
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .field label {
+        font: 600 11px/1 var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .field .v {
+        font-size: 15px;
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 8px 10px;
+        min-height: 38px;
+      }
+      .row2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .btn {
+        font: 600 14px/1 var(--body);
+        padding: 12px 16px;
+        border-radius: 4px;
+        border: 2px solid var(--ink);
+        background: var(--ink);
+        color: var(--paper);
+        cursor: default;
+      }
+      .btn.hl {
+        background: var(--hl);
+        color: var(--ink);
+        border-color: var(--ink);
+      }
+      .btns {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .offline {
+        font: 400 12px/1.4 var(--mono);
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .offline i {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--red);
+        display: inline-block;
+        flex: none;
+      }
+      pre.md {
+        margin: 0;
+        overflow-x: auto;
+        font: 400 13px/1.7 var(--mono);
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 14px;
+        color: var(--text);
+      }
+      pre.md .k {
+        color: var(--red);
+      }
+      .ex {
+        font: 600 11px/1 var(--mono);
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
 
-/* Tokens block */
-.codeblock { position: relative; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
-.codeblock pre { margin: 0; padding: 20px; overflow-x: auto; font: 400 13px/1.7 var(--mono); }
-.codeblock .copy { position: absolute; top: 12px; right: 12px; margin: 0; }
-footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 20px; }
-@media (prefers-reduced-motion: no-preference) {
-  .copy { transition: border-color .15s; }
-}
-</style>
+      /* Tokens block */
+      .codeblock {
+        position: relative;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+      }
+      .codeblock pre {
+        margin: 0;
+        padding: 20px;
+        overflow-x: auto;
+        font: 400 13px/1.7 var(--mono);
+      }
+      .codeblock .copy {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        margin: 0;
+      }
+      footer {
+        color: var(--muted);
+        font-size: 14px;
+        border-top: 1px solid var(--line);
+        padding-top: 20px;
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .copy {
+          transition: border-color 0.15s;
+        }
+      }
+    </style>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="jmark" viewBox="0 0 96 96">
-    <rect x="2" y="2" width="92" height="92" rx="24" fill="var(--t)" stroke="var(--s)" stroke-width="0"/>
-    <path d="M55 38 V62 C55 73 47 77 38 72" fill="none" stroke="var(--s)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="55" cy="22" r="7.5" fill="var(--d)"/>
-  </symbol>
-</svg>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="jmark" viewBox="0 0 96 96">
+        <rect
+          x="2"
+          y="2"
+          width="92"
+          height="92"
+          rx="24"
+          fill="var(--t)"
+          stroke="var(--s)"
+          stroke-width="0"
+        />
+        <path
+          d="M55 38 V62 C55 73 47 77 38 72"
+          fill="none"
+          stroke="var(--s)"
+          stroke-width="11"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <circle cx="55" cy="22" r="7.5" fill="var(--d)" />
+      </symbol>
+    </svg>
 
-<div class="wrap">
+    <div class="wrap">
+      <header class="ruled hero">
+        <span class="eyebrow">Visual identity, v1</span>
+        <div class="word" aria-label="Jotern"><span class="hl">jot</span><span>ern</span></div>
+        <p class="tag">Jot it daily. Hand it in weekly.</p>
+        <div class="meta">
+          <span class="chip">Offline daily log for interns</span>
+          <span class="chip">Exports to Markdown</span>
+          <span class="chip">Angular + Express + MongoDB</span>
+        </div>
+      </header>
 
-  <header class="ruled hero">
-    <span class="eyebrow">Visual identity, v1</span>
-    <div class="word" aria-label="Jotern"><span class="hl">jot</span><span>ern</span></div>
-    <p class="tag">Jot it daily. Hand it in weekly.</p>
-    <div class="meta">
-      <span class="chip">Offline daily log for interns</span>
-      <span class="chip">Exports to Markdown</span>
-      <span class="chip">Angular + Express + MongoDB</span>
-    </div>
-  </header>
+      <section class="sec">
+        <div class="sec-head">
+          <span class="eyebrow">Logo</span>
+          <h2>A j made from one pen stroke</h2>
+          <p class="lede">
+            The mark is a lowercase j drawn in a single line, with the dot as a highlighter hit. It
+            stays readable at favicon size. In the wordmark, "jot" sits on a highlighter swipe and
+            "ern" stays plain, so the name reads as jot + intern.
+          </p>
+        </div>
 
-  <section class="sec">
-    <div class="sec-head">
-      <span class="eyebrow">Logo</span>
-      <h2>A j made from one pen stroke</h2>
-      <p class="lede">The mark is a lowercase j drawn in a single line, with the dot as a highlighter hit. It stays readable at favicon size. In the wordmark, "jot" sits on a highlighter swipe and "ern" stays plain, so the name reads as jot + intern.</p>
-    </div>
-
-    <div class="logo-grid">
-      <div class="tile">
-        <div class="stage on-paper"><svg class="v-ink" width="120" height="120" role="img" aria-label="Jotern app icon, ink version"><use href="#jmark"/></svg></div>
-        <h3>App icon, ink</h3><p class="note">Default. Use on light grounds and as the app icon.</p>
-      </div>
-      <div class="tile">
-        <div class="stage on-ink"><svg class="v-hl" width="120" height="120" role="img" aria-label="Jotern app icon, highlighter version"><use href="#jmark"/></svg></div>
-        <h3>App icon, highlighter</h3><p class="note">For dark grounds and slide covers.</p>
-      </div>
-      <div class="tile">
-        <div class="stage on-hl"><svg class="v-line" width="120" height="120" role="img" aria-label="Jotern mark on highlighter"><use href="#jmark"/></svg></div>
-        <h3>Mark only</h3><p class="note">No tile. Ink j on a highlighter ground.</p>
-      </div>
-    </div>
-
-    <div class="logo-grid">
-      <div class="tile" style="grid-column: span 2; min-width: 0;">
-        <div class="stage on-ink" style="min-height: 150px; padding: 20px;">
-          <div class="lockup">
-            <svg class="v-hl" width="56" height="56" aria-hidden="true"><use href="#jmark"/></svg>
-            <div class="wm"><span>jot</span>ern</div>
+        <div class="logo-grid">
+          <div class="tile">
+            <div class="stage on-paper">
+              <svg
+                class="v-ink"
+                width="120"
+                height="120"
+                role="img"
+                aria-label="Jotern app icon, ink version"
+              >
+                <use href="#jmark" />
+              </svg>
+            </div>
+            <h3>App icon, ink</h3>
+            <p class="note">Default. Use on light grounds and as the app icon.</p>
+          </div>
+          <div class="tile">
+            <div class="stage on-ink">
+              <svg
+                class="v-hl"
+                width="120"
+                height="120"
+                role="img"
+                aria-label="Jotern app icon, highlighter version"
+              >
+                <use href="#jmark" />
+              </svg>
+            </div>
+            <h3>App icon, highlighter</h3>
+            <p class="note">For dark grounds and slide covers.</p>
+          </div>
+          <div class="tile">
+            <div class="stage on-hl">
+              <svg
+                class="v-line"
+                width="120"
+                height="120"
+                role="img"
+                aria-label="Jotern mark on highlighter"
+              >
+                <use href="#jmark" />
+              </svg>
+            </div>
+            <h3>Mark only</h3>
+            <p class="note">No tile. Ink j on a highlighter ground.</p>
           </div>
         </div>
-        <h3>Horizontal lockup</h3>
-        <p class="note">Mark left, wordmark right, set in Bricolage Grotesque ExtraBold with tight tracking. Never change the highlight to another color.</p>
-      </div>
-      <div class="tile">
-        <div class="stage" style="background: var(--bg);">
-          <div class="clear"><svg class="v-ink" width="64" height="64" aria-hidden="true"><use href="#jmark"/></svg></div>
-        </div>
-        <h3>Clear space</h3><p class="note">Keep a margin of x around the mark, where x is the width of the dot.</p>
-      </div>
-      <div class="tile">
-        <div class="stage" style="background: var(--bg);">
-          <div class="sizes">
-            <figure><svg class="v-ink" width="16" height="16" aria-hidden="true"><use href="#jmark"/></svg><figcaption>16</figcaption></figure>
-            <figure><svg class="v-ink" width="32" height="32" aria-hidden="true"><use href="#jmark"/></svg><figcaption>32</figcaption></figure>
-            <figure><svg class="v-ink" width="48" height="48" aria-hidden="true"><use href="#jmark"/></svg><figcaption>48</figcaption></figure>
-            <figure><svg class="v-ink" width="64" height="64" aria-hidden="true"><use href="#jmark"/></svg><figcaption>64</figcaption></figure>
+
+        <div class="logo-grid">
+          <div class="tile" style="grid-column: span 2; min-width: 0">
+            <div class="stage on-ink" style="min-height: 150px; padding: 20px">
+              <div class="lockup">
+                <svg class="v-hl" width="56" height="56" aria-hidden="true">
+                  <use href="#jmark" />
+                </svg>
+                <div class="wm"><span>jot</span>ern</div>
+              </div>
+            </div>
+            <h3>Horizontal lockup</h3>
+            <p class="note">
+              Mark left, wordmark right, set in Bricolage Grotesque ExtraBold with tight tracking.
+              Never change the highlight to another color.
+            </p>
+          </div>
+          <div class="tile">
+            <div class="stage" style="background: var(--bg)">
+              <div class="clear">
+                <svg class="v-ink" width="64" height="64" aria-hidden="true">
+                  <use href="#jmark" />
+                </svg>
+              </div>
+            </div>
+            <h3>Clear space</h3>
+            <p class="note">Keep a margin of x around the mark, where x is the width of the dot.</p>
+          </div>
+          <div class="tile">
+            <div class="stage" style="background: var(--bg)">
+              <div class="sizes">
+                <figure>
+                  <svg class="v-ink" width="16" height="16" aria-hidden="true">
+                    <use href="#jmark" />
+                  </svg>
+                  <figcaption>16</figcaption>
+                </figure>
+                <figure>
+                  <svg class="v-ink" width="32" height="32" aria-hidden="true">
+                    <use href="#jmark" />
+                  </svg>
+                  <figcaption>32</figcaption>
+                </figure>
+                <figure>
+                  <svg class="v-ink" width="48" height="48" aria-hidden="true">
+                    <use href="#jmark" />
+                  </svg>
+                  <figcaption>48</figcaption>
+                </figure>
+                <figure>
+                  <svg class="v-ink" width="64" height="64" aria-hidden="true">
+                    <use href="#jmark" />
+                  </svg>
+                  <figcaption>64</figcaption>
+                </figure>
+              </div>
+            </div>
+            <h3>Small sizes</h3>
+            <p class="note">Favicon at 16 px, browser tab at 32, desktop shortcut at 64 and up.</p>
           </div>
         </div>
-        <h3>Small sizes</h3><p class="note">Favicon at 16 px, browser tab at 32, desktop shortcut at 64 and up.</p>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section class="sec">
-    <div class="sec-head">
-      <span class="eyebrow">Color</span>
-      <h2>Ink, paper and a highlighter</h2>
-      <p class="lede">Dark blue ink on cool paper, with one highlighter yellow for whatever the intern should notice. Margin red marks the notebook edge and offline state, never a call to action.</p>
-    </div>
-    <div class="swatches">
-      <div class="sw"><div class="chipbox" style="background: #1B2A5C;"></div><div class="info"><span class="name">Ink</span><code>#1B2A5C</code><span class="role">Text, icon tile, primary button</span><button class="copy" data-copy="#1B2A5C">Copy hex</button></div></div>
-      <div class="sw"><div class="chipbox" style="background: #F3F5FA;"></div><div class="info"><span class="name">Paper</span><code>#F3F5FA</code><span class="role">Page background, light surfaces</span><button class="copy" data-copy="#F3F5FA">Copy hex</button></div></div>
-      <div class="sw"><div class="chipbox" style="background: #FFD84A;"></div><div class="info"><span class="name">Highlighter</span><code>#FFD84A</code><span class="role">Emphasis, active week, the dot</span><button class="copy" data-copy="#FFD84A">Copy hex</button></div></div>
-      <div class="sw"><div class="chipbox" style="background: #E5484D;"></div><div class="info"><span class="name">Margin red</span><code>#E5484D</code><span class="role">Notebook margin, offline dot, errors</span><button class="copy" data-copy="#E5484D">Copy hex</button></div></div>
-      <div class="sw"><div class="chipbox" style="background: #6B7490;"></div><div class="info"><span class="name">Pencil</span><code>#6B7490</code><span class="role">Secondary text, guides, borders</span><button class="copy" data-copy="#6B7490">Copy hex</button></div></div>
-    </div>
-    <div class="pairs">
-      <div class="pair" style="background: #F3F5FA; color: #1B2A5C;"><b>Ink on Paper</b><small>12.5 : 1, body text</small></div>
-      <div class="pair" style="background: #FFD84A; color: #1B2A5C;"><b>Ink on Highlighter</b><small>9.9 : 1, buttons and chips</small></div>
-      <div class="pair" style="background: #1B2A5C; color: #F3F5FA;"><b>Paper on Ink</b><small>12.5 : 1, dark mode text</small></div>
-      <div class="pair" style="background: #F3F5FA; color: #E5484D; border: 1px solid var(--line);"><b>Red on Paper</b><small style="color:#5A6485;">3.6 : 1, rules and large text only</small></div>
-    </div>
-  </section>
-
-  <section class="sec">
-    <div class="sec-head">
-      <span class="eyebrow">Typography</span>
-      <h2>Friendly headlines, plain body, mono for exports</h2>
-      <p class="lede">Bricolage Grotesque gives the name its slightly bent, handwritten feel. Public Sans keeps long entries easy to read. JetBrains Mono is for dates, durations and Markdown, so the app looks like the files it produces.</p>
-    </div>
-    <div class="type-grid">
-      <div class="spec">
-        <span class="eyebrow">Display</span>
-        <div class="big f-display">Aa Jotern</div>
-        <p class="note">Bricolage Grotesque, 800 for names and headings, 500 for taglines. Tracking −3% to −4%.</p>
-      </div>
-      <div class="spec">
-        <span class="eyebrow">Body</span>
-        <div class="big f-body" style="font-weight: 500;">Aa Entry</div>
-        <p class="note">Public Sans, 400 and 600. Line height 1.6, lines of 65 characters at most.</p>
-      </div>
-      <div class="spec">
-        <span class="eyebrow">Data</span>
-        <div class="big f-mono" style="font-weight: 600;">3h 30</div>
-        <p class="note">JetBrains Mono, 400 and 600. For dates, durations, week numbers and exported Markdown.</p>
-      </div>
-    </div>
-    <div class="spec">
-      <div class="scale">
-        <div><small>Display 48</small><span class="f-display" style="font-size: 48px; line-height: 1;">Week 2</span></div>
-        <div><small>Heading 28</small><span class="f-display" style="font-size: 28px; line-height: 1.1;">What I did on Wednesday</span></div>
-        <div><small>Body 16</small><span>Connected the Express API to MongoDB and tested the first three routes.</span></div>
-        <div><small>Label 12</small><span class="eyebrow">Difficulties</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec">
-    <div class="sec-head">
-      <span class="eyebrow">Voice</span>
-      <h2>Short, direct, written for someone tired at 5 pm</h2>
-      <p class="lede">An intern fills this in at the end of a work day. Every string should take less time to read than to ignore.</p>
-    </div>
-    <div class="principles">
-      <div><h3>Say what happens</h3><p class="note">Buttons name the action: "Jot today", "Export week".</p></div>
-      <div><h3>Reassure about the laptop</h3><p class="note">Offline is the normal state, so say where the data is.</p></div>
-      <div><h3>Keep it casual, not cute</h3><p class="note">The name is playful. The report that comes out is not.</p></div>
-    </div>
-    <div class="voice">
-      <div class="line"><span class="eyebrow">Button</span><q>Jot today</q></div>
-      <div class="line"><span class="eyebrow">Empty day</span><q>Nothing jotted yet. Start with one line.</q></div>
-      <div class="line"><span class="eyebrow">Offline notice</span><q>You're offline. Everything is saved on this laptop.</q></div>
-      <div class="line"><span class="eyebrow">Export done</span><q>Week 2 exported to Markdown.</q></div>
-      <div class="line"><span class="eyebrow">Missing field</span><q>Add the time spent so the week adds up.</q></div>
-      <div class="line"><span class="eyebrow">Report outline</span><q>Outline built from your ENSPD template.</q></div>
-    </div>
-  </section>
-
-  <section class="sec">
-    <div class="sec-head">
-      <span class="eyebrow">In use</span>
-      <h2>The daily entry and the weekly export</h2>
-      <p class="lede">Two screens from v1 dressed in the identity. The content is example text, not a real log.</p>
-    </div>
-    <div class="apps">
-      <div class="ruled app">
-        <div class="bar">
-          <div class="brandbar"><svg class="v-ink" width="28" height="28" aria-hidden="true"><use href="#jmark"/></svg><span>jotern</span></div>
-          <span class="pill">Week 2</span>
+      <section class="sec">
+        <div class="sec-head">
+          <span class="eyebrow">Color</span>
+          <h2>Ink, paper and a highlighter</h2>
+          <p class="lede">
+            Dark blue ink on cool paper, with one highlighter yellow for whatever the intern should
+            notice. Margin red marks the notebook edge and offline state, never a call to action.
+          </p>
         </div>
-        <span class="ex">Example entry</span>
-        <div class="field"><label>Date</label><div class="v f-mono" style="font-family: var(--mono); font-size: 14px;">Wed 7 Oct 2026</div></div>
-        <div class="field"><label>What I did</label><div class="v">Connected the Express API to MongoDB and tested the first three routes.</div></div>
-        <div class="row2">
-          <div class="field"><label>Time spent</label><div class="v" style="font-family: var(--mono); font-size: 14px;">3h 30</div></div>
-          <div class="field"><label>Difficulty</label><div class="v">CORS errors</div></div>
+        <div class="swatches">
+          <div class="sw">
+            <div class="chipbox" style="background: #1b2a5c"></div>
+            <div class="info">
+              <span class="name">Ink</span><code>#1B2A5C</code
+              ><span class="role">Text, icon tile, primary button</span
+              ><button class="copy" data-copy="#1B2A5C">Copy hex</button>
+            </div>
+          </div>
+          <div class="sw">
+            <div class="chipbox" style="background: #f3f5fa"></div>
+            <div class="info">
+              <span class="name">Paper</span><code>#F3F5FA</code
+              ><span class="role">Page background, light surfaces</span
+              ><button class="copy" data-copy="#F3F5FA">Copy hex</button>
+            </div>
+          </div>
+          <div class="sw">
+            <div class="chipbox" style="background: #ffd84a"></div>
+            <div class="info">
+              <span class="name">Highlighter</span><code>#FFD84A</code
+              ><span class="role">Emphasis, active week, the dot</span
+              ><button class="copy" data-copy="#FFD84A">Copy hex</button>
+            </div>
+          </div>
+          <div class="sw">
+            <div class="chipbox" style="background: #e5484d"></div>
+            <div class="info">
+              <span class="name">Margin red</span><code>#E5484D</code
+              ><span class="role">Notebook margin, offline dot, errors</span
+              ><button class="copy" data-copy="#E5484D">Copy hex</button>
+            </div>
+          </div>
+          <div class="sw">
+            <div class="chipbox" style="background: #6b7490"></div>
+            <div class="info">
+              <span class="name">Pencil</span><code>#6B7490</code
+              ><span class="role">Secondary text, guides, borders</span
+              ><button class="copy" data-copy="#6B7490">Copy hex</button>
+            </div>
+          </div>
         </div>
-        <div class="field"><label>Lesson</label><div class="v">Set the allowed origin once in middleware, not per route.</div></div>
-        <div class="btns"><span class="btn hl">Jot today</span><span class="btn" style="background: transparent; color: var(--text); border-color: var(--line);">Export week</span></div>
-        <div class="offline"><i></i>Offline. Saved on this laptop.</div>
-      </div>
+        <div class="pairs">
+          <div class="pair" style="background: #f3f5fa; color: #1b2a5c">
+            <b>Ink on Paper</b><small>12.5 : 1, body text</small>
+          </div>
+          <div class="pair" style="background: #ffd84a; color: #1b2a5c">
+            <b>Ink on Highlighter</b><small>9.9 : 1, buttons and chips</small>
+          </div>
+          <div class="pair" style="background: #1b2a5c; color: #f3f5fa">
+            <b>Paper on Ink</b><small>12.5 : 1, dark mode text</small>
+          </div>
+          <div
+            class="pair"
+            style="background: #f3f5fa; color: #e5484d; border: 1px solid var(--line)"
+          >
+            <b>Red on Paper</b
+            ><small style="color: #5a6485">3.6 : 1, rules and large text only</small>
+          </div>
+        </div>
+      </section>
 
-      <div class="ruled app">
-        <div class="bar">
-          <div class="brandbar"><svg class="v-ink" width="28" height="28" aria-hidden="true"><use href="#jmark"/></svg><span>jotern</span></div>
-          <span class="pill">Export</span>
+      <section class="sec">
+        <div class="sec-head">
+          <span class="eyebrow">Typography</span>
+          <h2>Friendly headlines, plain body, mono for exports</h2>
+          <p class="lede">
+            Bricolage Grotesque gives the name its slightly bent, handwritten feel. Public Sans
+            keeps long entries easy to read. JetBrains Mono is for dates, durations and Markdown, so
+            the app looks like the files it produces.
+          </p>
         </div>
-        <span class="ex">Example export · week-02.md</span>
-        <pre class="md"><span class="k">## </span>Week 2 (5 to 9 Oct 2026)
+        <div class="type-grid">
+          <div class="spec">
+            <span class="eyebrow">Display</span>
+            <div class="big f-display">Aa Jotern</div>
+            <p class="note">
+              Bricolage Grotesque, 800 for names and headings, 500 for taglines. Tracking −3% to
+              −4%.
+            </p>
+          </div>
+          <div class="spec">
+            <span class="eyebrow">Body</span>
+            <div class="big f-body" style="font-weight: 500">Aa Entry</div>
+            <p class="note">
+              Public Sans, 400 and 600. Line height 1.6, lines of 65 characters at most.
+            </p>
+          </div>
+          <div class="spec">
+            <span class="eyebrow">Data</span>
+            <div class="big f-mono" style="font-weight: 600">3h 30</div>
+            <p class="note">
+              JetBrains Mono, 400 and 600. For dates, durations, week numbers and exported Markdown.
+            </p>
+          </div>
+        </div>
+        <div class="spec">
+          <div class="scale">
+            <div>
+              <small>Display 48</small
+              ><span class="f-display" style="font-size: 48px; line-height: 1">Week 2</span>
+            </div>
+            <div>
+              <small>Heading 28</small
+              ><span class="f-display" style="font-size: 28px; line-height: 1.1"
+                >What I did on Wednesday</span
+              >
+            </div>
+            <div>
+              <small>Body 16</small
+              ><span>Connected the Express API to MongoDB and tested the first three routes.</span>
+            </div>
+            <div><small>Label 12</small><span class="eyebrow">Difficulties</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec">
+        <div class="sec-head">
+          <span class="eyebrow">Voice</span>
+          <h2>Short, direct, written for someone tired at 5 pm</h2>
+          <p class="lede">
+            An intern fills this in at the end of a work day. Every string should take less time to
+            read than to ignore.
+          </p>
+        </div>
+        <div class="principles">
+          <div>
+            <h3>Say what happens</h3>
+            <p class="note">Buttons name the action: "Jot today", "Export week".</p>
+          </div>
+          <div>
+            <h3>Reassure about the laptop</h3>
+            <p class="note">Offline is the normal state, so say where the data is.</p>
+          </div>
+          <div>
+            <h3>Keep it casual, not cute</h3>
+            <p class="note">The name is playful. The report that comes out is not.</p>
+          </div>
+        </div>
+        <div class="voice">
+          <div class="line"><span class="eyebrow">Button</span><q>Jot today</q></div>
+          <div class="line">
+            <span class="eyebrow">Empty day</span><q>Nothing jotted yet. Start with one line.</q>
+          </div>
+          <div class="line">
+            <span class="eyebrow">Offline notice</span
+            ><q>You're offline. Everything is saved on this laptop.</q>
+          </div>
+          <div class="line">
+            <span class="eyebrow">Export done</span><q>Week 2 exported to Markdown.</q>
+          </div>
+          <div class="line">
+            <span class="eyebrow">Missing field</span><q>Add the time spent so the week adds up.</q>
+          </div>
+          <div class="line">
+            <span class="eyebrow">Report outline</span
+            ><q>Outline built from your ENSPD template.</q>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec">
+        <div class="sec-head">
+          <span class="eyebrow">In use</span>
+          <h2>The daily entry and the weekly export</h2>
+          <p class="lede">
+            Two screens from v1 dressed in the identity. The content is example text, not a real
+            log.
+          </p>
+        </div>
+        <div class="apps">
+          <div class="ruled app">
+            <div class="bar">
+              <div class="brandbar">
+                <svg class="v-ink" width="28" height="28" aria-hidden="true">
+                  <use href="#jmark" /></svg
+                ><span>jotern</span>
+              </div>
+              <span class="pill">Week 2</span>
+            </div>
+            <span class="ex">Example entry</span>
+            <div class="field">
+              <label>Date</label>
+              <div class="v f-mono" style="font-family: var(--mono); font-size: 14px">
+                Wed 7 Oct 2026
+              </div>
+            </div>
+            <div class="field">
+              <label>What I did</label>
+              <div class="v">
+                Connected the Express API to MongoDB and tested the first three routes.
+              </div>
+            </div>
+            <div class="row2">
+              <div class="field">
+                <label>Time spent</label>
+                <div class="v" style="font-family: var(--mono); font-size: 14px">3h 30</div>
+              </div>
+              <div class="field">
+                <label>Difficulty</label>
+                <div class="v">CORS errors</div>
+              </div>
+            </div>
+            <div class="field">
+              <label>Lesson</label>
+              <div class="v">Set the allowed origin once in middleware, not per route.</div>
+            </div>
+            <div class="btns">
+              <span class="btn hl">Jot today</span
+              ><span
+                class="btn"
+                style="background: transparent; color: var(--text); border-color: var(--line)"
+                >Export week</span
+              >
+            </div>
+            <div class="offline"><i></i>Offline. Saved on this laptop.</div>
+          </div>
+
+          <div class="ruled app">
+            <div class="bar">
+              <div class="brandbar">
+                <svg class="v-ink" width="28" height="28" aria-hidden="true">
+                  <use href="#jmark" /></svg
+                ><span>jotern</span>
+              </div>
+              <span class="pill">Export</span>
+            </div>
+            <span class="ex">Example export · week-02.md</span>
+            <pre class="md"><span class="k">## </span>Week 2 (5 to 9 Oct 2026)
 
 <span class="k">### </span>Wed 7 Oct · 3h 30
 - Connected the Express API to MongoDB
@@ -358,20 +1018,26 @@ footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line)
 - Delivered v1 to the supervisor
 
 <span class="k">**</span>Total: 7h 30<span class="k">**</span></pre>
-        <div class="btns"><span class="btn">Export week</span><span class="btn hl">Build report outline</span></div>
-      </div>
-    </div>
-  </section>
+            <div class="btns">
+              <span class="btn">Export week</span><span class="btn hl">Build report outline</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <section class="sec">
-    <div class="sec-head">
-      <span class="eyebrow">Design tokens</span>
-      <h2>Ready for the Angular styles</h2>
-      <p class="lede">Paste this into the global stylesheet. The theme tokens switch with the system setting, and the brand colors stay fixed.</p>
-    </div>
-    <div class="codeblock">
-      <button class="copy" id="copy-tokens" type="button">Copy CSS</button>
-      <pre id="tokens">:root {
+      <section class="sec">
+        <div class="sec-head">
+          <span class="eyebrow">Design tokens</span>
+          <h2>Ready for the Angular styles</h2>
+          <p class="lede">
+            Paste this into the global stylesheet. The theme tokens switch with the system setting,
+            and the brand colors stay fixed.
+          </p>
+        </div>
+        <div class="codeblock">
+          <button class="copy" id="copy-tokens" type="button">Copy CSS</button>
+          <pre id="tokens">
+:root {
   /* Brand */
   --jt-ink: #1B2A5C;
   --jt-paper: #F3F5FA;
@@ -399,40 +1065,59 @@ footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line)
     --jt-muted: #9EA8CB;
     --jt-line: #2B376A;
   }
-}</pre>
+}</pre
+          >
+        </div>
+      </section>
+
+      <footer>
+        Jotern, an offline log and report helper for interns. Identity v1, October 2026.
+      </footer>
     </div>
-  </section>
 
-  <footer>Jotern, an offline log and report helper for interns. Identity v1, October 2026.</footer>
-</div>
-
-<script>
-(function () {
-  function flash(btn, msg) {
-    var old = btn.textContent;
-    btn.textContent = msg;
-    setTimeout(function () { btn.textContent = old; }, 1400);
-  }
-  function selectNode(node) {
-    try {
-      var r = document.createRange(); r.selectNodeContents(node);
-      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-    } catch (e) {}
-  }
-  function copy(text, btn, fallbackNode) {
-    var done = function () { flash(btn, "Copied"); };
-    var fail = function () { if (fallbackNode) selectNode(fallbackNode); flash(btn, "Select and copy"); };
-    try {
-      navigator.clipboard.writeText(text).then(done, fail);
-    } catch (e) { fail(); }
-  }
-  document.querySelectorAll("button[data-copy]").forEach(function (b) {
-    b.addEventListener("click", function () { copy(b.getAttribute("data-copy"), b, b.parentNode.querySelector("code")); });
-  });
-  var t = document.getElementById("copy-tokens");
-  var pre = document.getElementById("tokens");
-  t.addEventListener("click", function () { copy(pre.textContent, t, pre); });
-})();
-</script>
-
-</body></html>
+    <script>
+      (function () {
+        function flash(btn, msg) {
+          var old = btn.textContent;
+          btn.textContent = msg;
+          setTimeout(function () {
+            btn.textContent = old;
+          }, 1400);
+        }
+        function selectNode(node) {
+          try {
+            var r = document.createRange();
+            r.selectNodeContents(node);
+            var s = window.getSelection();
+            s.removeAllRanges();
+            s.addRange(r);
+          } catch (e) {}
+        }
+        function copy(text, btn, fallbackNode) {
+          var done = function () {
+            flash(btn, 'Copied');
+          };
+          var fail = function () {
+            if (fallbackNode) selectNode(fallbackNode);
+            flash(btn, 'Select and copy');
+          };
+          try {
+            navigator.clipboard.writeText(text).then(done, fail);
+          } catch (e) {
+            fail();
+          }
+        }
+        document.querySelectorAll('button[data-copy]').forEach(function (b) {
+          b.addEventListener('click', function () {
+            copy(b.getAttribute('data-copy'), b, b.parentNode.querySelector('code'));
+          });
+        });
+        var t = document.getElementById('copy-tokens');
+        var pre = document.getElementById('tokens');
+        t.addEventListener('click', function () {
+          copy(pre.textContent, t, pre);
+        });
+      })();
+    </script>
+  </body>
+</html>

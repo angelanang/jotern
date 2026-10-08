@@ -1,0 +1,10 @@
+app-sync-status {
+  position: fixed;
+  top: 750px;
+  left: 0px;
+}
+
+main {
+  position: fixed;
+  left: 250px;
+}

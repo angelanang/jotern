@@ -1,0 +1,52 @@
+.sidebar {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 220px;
+  background-color: var(--jt-surface);
+  border-right: 1px solid var(--jt-line);
+  padding: 28px 20px 24px;
+}
+
+.brand,
+.log {
+  display: flex;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  background: var(--jt-logo) no-repeat center / contain;
+}
+
+.logo-word {
+  width: 73px;
+  height: 34px;
+  background: var(--jt-logo-word) no-repeat center / contain;
+}
+
+nav {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  color: var(--jt-muted);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  border-radius: 4px;
+}
+
+.nav-link.active {
+  background-color: var(--jt-highlighter);
+  color: var(--jt-ink);
+}
+
+.nav-icon {
+  display: block;
+}
