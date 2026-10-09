@@ -184,7 +184,7 @@ article {
   padding: 1rem;
   border: 1px solid var(--jt-line);
   background-color: var(--jt-surface);
-  border-radius: 2%;
+  border-radius: 3%;
 }
 
 .label {
@@ -197,11 +197,40 @@ article {
   height: 1px;
   background-color: var(--jt-line);
 }
+.bordered {
+  border-color: var(--jt-line);
+  
+}
 
-.button {
+.circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--jt-margin-red);
+
+  &.circle-blue {
+    background-color: var(--jt-ink);
+  }
+}
+
+.square {
+  width: 5px;
+  height: 5px;
+  background-color: var(--jt-margin-red);
+
+  &.square-blue {
+    background-color: var(--jt-ink);
+  }
+}
+
+.button,
+.tag {
   width: fit-content;
   height: fit-content;
-  background-color: var(--jt-text);
+}
+
+.button {
+  background-color: var(--jt-ink);
   border-radius: 5%;
 }
 
@@ -210,6 +239,17 @@ article {
   font-weight: bold;
   letter-spacing: 0.5px;
   padding: 0.75rem;
+}
+
+.tag {
+  border: 1px solid var(--jt-line);
+  border-radius: 2%;
+}
+
+.tag-text {
+  font-size: x-small;
+  font-weight: 600;
+  color: var(--jt-muted);
 }
 
 /* Extra, to be cautious */

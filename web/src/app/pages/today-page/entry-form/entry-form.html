@@ -1,1 +1,42 @@
-<p>entry-form works!</p>
+<h4>Jot today</h4>
+<h6 class="text-muted">One minute now saves an hour on Friday.</h6>
+
+<h6 class="text-muted">
+  <div class="circle circle-blue"></div>
+  Saved locally
+</h6>
+
+<h6>Date</h6>
+<output class="bordered"> {{ dateService.currentDate() | date: 'EEE d MMM yyyy' }} </output>
+
+<h6>What I did</h6>
+<input class="bordered" type="text" />
+
+<h6>Time Spent</h6>
+<input type="number" /> hours <input type="number" /> minutes
+
+<h6>Tags</h6>
+
+<data class="tag tag-text">Documentation</data>
+<data class="tag tag-text">Development</data>
+<data class="tag tag-text">Debugging</data>
+<data class="tag tag-text">Learning</data>
+<data class="tag tag-text">Research</data>
+<data class="tag tag-text">Meeting</data>
+<data class="tag tag-text">Testing</data>
+<data class="tag tag-text">Design</data>
+<data class="tag tag-text">Admin</data>
+<data class="tag tag-text">Other</data>
+
+<h6>Difficulty, solution, lesson
+</h6>
+
+<h6>Difficulty</h6>
+<h6>How I solved it</h6>
+<h6>What I learned</h6>
+
+<h6>Keep it rough. You can edit it later.</h6>
+
+<span class="button">
+    <h6 class="button-text">Jot today</h6>
+</span>

@@ -7,3 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './entry-card.html',
 })
 export class EntryCard {}
+ 

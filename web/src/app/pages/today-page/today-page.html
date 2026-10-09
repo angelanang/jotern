@@ -1,6 +1,8 @@
 <span>
   <h6 class="label">YOUR WORKDAY</h6>
-  <h1 class="date">Today · {{ currentDate | date: 'EEE d MMM yyyy' }}</h1>
+  <time>
+    <h1>Today · {{ dateService.currentDate() | date: 'EEE d MMM yyyy' }}</h1>
+  </time>
   <h5 class="text-muted">Jot it daily. Hand it in weekly.</h5>
 </span>
 
@@ -25,7 +27,3 @@
 </article>
 
 <app-entry-list></app-entry-list>
-
-<article class="entry-card">
-  <app-entry-card></app-entry-card>
-</article>

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { inject } from '@angular/core';
 
 import { DatePipe } from '@angular/common';
+import { DateService } from '../../date.service';
 
 import { StatTimePerWeek } from './stat-time-per-week/stat-time-per-week';
 import { StatDaysPerWeek } from './stat-days-per-week/stat-days-per-week';
@@ -9,7 +11,6 @@ import { StatDifficulties } from './stat-difficulties/stat-difficulties';
 
 import { EntryForm } from './entry-form/entry-form';
 import { EntryList } from './entry-list/entry-list';
-import { EntryCard } from './entry-card/entry-card';
 
 @Component({
   imports: [
@@ -20,12 +21,11 @@ import { EntryCard } from './entry-card/entry-card';
     StatDifficulties,
     EntryForm,
     EntryList,
-    EntryCard,
   ],
   selector: 'app-today-page',
   styleUrl: './today-page.css',
   templateUrl: './today-page.html',
 })
 export class TodayPage {
-  currentDate: Date = new Date();
-}
+   protected dateService = inject(DateService);
+  }

@@ -1,1 +1,9 @@
-<p>entry-list works!</p>
+<h4>Today’s entries</h4>
+
+<h6>
+  <output class="entries-count"></output> entries · <time>{{ dateService.currentDate() | date: 'EEE d MMM yyyy' }}</time>
+</h6>
+
+<article class="entry-card">
+  <app-entry-card ></app-entry-card>
+</article>

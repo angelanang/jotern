@@ -1,0 +1,200 @@
+<!-- Home page for route "/". Rendered inside AppShell, next to the sidebar. -->
+
+<header class="hero ruled">
+  <span class="label">YOUR INTERNSHIP LOG</span>
+  <h1 class="word" aria-label="Jotern"><span class="hl">jot</span>ern</h1>
+  <p class="tag">Jot it daily. Hand it in weekly.</p>
+  <p class="sub text-muted">
+    Five details to set up. One entry a day. A report outline when the internship ends.
+  </p>
+  <div class="ctas">
+    <a class="button cta" routerLink="/setup"><h6 class="button-text">Set up your internship</h6></a>
+    <a class="button cta cta-hl" routerLink="/today"><h6 class="button-text">Open Today</h6></a>
+  </div>
+  <div class="meta">
+    <span class="chip text-mono">Offline daily log for interns</span>
+    <span class="chip text-mono">Saved on this laptop</span>
+    <span class="chip text-mono">Exports to Markdown</span>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="label">HOW IT WORKS</span>
+    <h2>From first run to final report</h2>
+    <p class="lede text-muted">Four pages, in the order you will use them.</p>
+  </div>
+  <div class="steps">
+    <a class="step" routerLink="/setup">
+      <span class="step-top">
+        <span class="step-no text-mono">1</span>
+        <span class="jt-icon jt-icon--setup"></span>
+      </span>
+      <h6 class="label">FIRST RUN</h6>
+      <h3>Setup</h3>
+      <p class="text-muted">
+        Five details about your internship, plus the tags you will sort entries by. You can change
+        all of it later.
+      </p>
+    </a>
+    <a class="step" routerLink="/today">
+      <span class="step-top">
+        <span class="step-no text-mono">2</span>
+        <span class="jt-icon jt-icon--today"></span>
+      </span>
+      <h6 class="label">YOUR WORKDAY</h6>
+      <h3>Today</h3>
+      <p class="text-muted">
+        Jot what you did, how long it took, what was hard and what you learned. Takes a minute.
+      </p>
+    </a>
+    <a class="step" routerLink="/week">
+      <span class="step-top">
+        <span class="step-no text-mono">3</span>
+        <span class="jt-icon jt-icon--week"></span>
+      </span>
+      <h6 class="label">WEEKLY LOG</h6>
+      <h3>Week</h3>
+      <p class="text-muted">Your week in one view: a summary on top, each day's entries below.</p>
+    </a>
+    <a class="step" routerLink="/report">
+      <span class="step-top">
+        <span class="step-no text-mono">4</span>
+        <span class="jt-icon jt-icon--report"></span>
+      </span>
+      <h6 class="label">INTERNSHIP REPORT</h6>
+      <h3>Report</h3>
+      <p class="text-muted">
+        Build a report outline from your template, preview it, then download it as .md.
+      </p>
+    </a>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="label">IN USE</span>
+    <h2>The daily entry and the weekly export</h2>
+    <p class="lede text-muted">
+      Two screens from the app. The content is example text, not a real log.
+    </p>
+  </div>
+  <div class="apps">
+    <div class="ruled app">
+      <div class="app-head">
+        <span class="label">YOUR WORKDAY</span>
+        <span class="pill text-mono">Week 2</span>
+      </div>
+      <h3 class="app-title">Today · Wed 7 Oct 2026</h3>
+      <article class="panel entry">
+        <div class="field">
+          <span class="field-label text-mono">Date</span>
+          <div class="v text-mono">Wed 7 Oct 2026</div>
+        </div>
+        <div class="field">
+          <span class="field-label text-mono">What I did</span>
+          <div class="v">Connected the Express API to MongoDB and tested the first three routes.</div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <span class="field-label text-mono">Time spent</span>
+            <div class="v text-mono">3h 30</div>
+          </div>
+          <div class="field">
+            <span class="field-label text-mono">Difficulty</span>
+            <div class="v">CORS errors</div>
+          </div>
+        </div>
+        <div class="field">
+          <span class="field-label text-mono">Lesson</span>
+          <div class="v">Set the allowed origin once in middleware, not per route.</div>
+        </div>
+      </article>
+      <span class="button cta-static">
+        <h6 class="button-text"><span class="jt-icon jt-icon--plus jt-icon--sm"></span> Jot today</h6>
+      </span>
+      <p class="offline text-mono"><i></i>Offline. Saved on this laptop</p>
+    </div>
+
+    <div class="ruled app">
+      <div class="app-head">
+        <span class="label">INTERNSHIP REPORT</span>
+        <span class="pill text-mono">Export</span>
+      </div>
+      <h3 class="app-title text-mono">week-02.md</h3>
+      <pre class="md text-mono"><span class="k">## </span>Week 2 (5 to 9 Oct 2026)
+
+<span class="k">### </span>Wed 7 Oct · 3h 30
+- Connected the Express API to MongoDB
+- Tested the first three routes
+- Difficulty: CORS errors
+- Lesson: set the origin once, in middleware
+
+<span class="k">### </span>Thu 8 Oct · 4h 00
+- Delivered v1 to the supervisor
+
+<span class="k">**</span>Total: 7h 30<span class="k">**</span></pre>
+      <div class="btns">
+        <span class="button cta-static"><h6 class="button-text">Build report outline</h6></span>
+        <span class="button cta-static cta-hl">
+          <h6 class="button-text">
+            <span class="jt-icon jt-icon--download jt-icon--sm"></span> Download .md
+          </h6>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="label">ON TODAY</span>
+    <h2>Four numbers, always in view</h2>
+    <p class="lede text-muted">
+      The top of the Today page keeps score, so the weekly report never starts from zero.
+    </p>
+  </div>
+  <div class="stats">
+    <article class="panel stat">
+      <span class="label">TIME PER WEEK</span>
+      <p class="stat-num text-mono">7h 30</p>
+      <span class="text-muted">This week</span>
+    </article>
+    <article class="panel stat">
+      <span class="label">DAYS PER WEEK</span>
+      <p class="stat-num text-mono">2 <small>of 5</small></p>
+      <span class="text-muted">Days with an entry</span>
+    </article>
+    <article class="panel stat">
+      <span class="label">TIME BY TAG</span>
+      <ul class="bars text-mono">
+        <li><span>Backend</span><i style="--w: 53%"></i><b>4h 00</b></li>
+        <li><span>Debugging</span><i style="--w: 33%"></i><b>2h 30</b></li>
+        <li><span>Meetings</span><i style="--w: 14%"></i><b>1h 00</b></li>
+      </ul>
+    </article>
+    <article class="panel stat">
+      <span class="label">DIFFICULTIES</span>
+      <p class="stat-num text-mono">1</p>
+      <span class="text-muted">CORS errors</span>
+    </article>
+  </div>
+</section>
+
+<section class="offline-note panel-row">
+  <span class="dot" aria-hidden="true"></span>
+  <div>
+    <h3 class="text-mono">Offline. Saved on this laptop</h3>
+    <p class="text-muted">
+      Offline is the normal state here. Everything you jot stays on your laptop, so a bad connection
+      does not get in your way.
+    </p>
+  </div>
+</section>
+
+<section class="ruled closing">
+  <h2>Five details. Then you're ready.</h2>
+  <a class="button cta cta-hl" routerLink="/setup"><h6 class="button-text">Start jotting</h6></a>
+</section>
+
+<footer>Jotern, an offline log and report helper for interns. Identity v1, October 2026.</footer>

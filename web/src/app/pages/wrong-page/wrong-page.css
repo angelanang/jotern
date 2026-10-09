@@ -1,0 +1,109 @@
+/* Wrong page (route "**"). Only --jt-* tokens and global classes. */
+
+:host {
+  --margin: color-mix(in srgb, var(--jt-margin-red) 55%, transparent);
+  --rule: color-mix(in srgb, var(--jt-text) 8%, transparent);
+  display: block;
+  /* main is position: fixed and shrink-to-fit, so give the page its own width */
+  width: min(720px, calc(100vw - 250px - 48px));
+  padding-block: 24px 72px;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.card {
+  --m: clamp(36px, 7vw, 68px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 40px 24px 40px var(--m);
+  background:
+    linear-gradient(
+      90deg,
+      transparent calc(var(--m) - 14px),
+      var(--margin) calc(var(--m) - 14px) calc(var(--m) - 12px),
+      transparent calc(var(--m) - 12px)
+    ),
+    repeating-linear-gradient(to bottom, transparent 0 31px, var(--rule) 31px 32px),
+    var(--jt-surface);
+  border: 1px solid var(--jt-line);
+  border-radius: 6px;
+}
+
+.label {
+  font-size: 12px;
+}
+
+.code {
+  font-size: clamp(56px, 12vw, 112px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.code .hl {
+  color: var(--jt-ink);
+  background: linear-gradient(transparent 52%, var(--jt-highlighter) 52% 94%, transparent 94%);
+  padding-inline: 0.04em;
+}
+
+h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-muted {
+  max-width: 48ch;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--jt-line);
+  border-radius: 4px;
+  background: var(--jt-bg);
+  color: var(--jt-text);
+  font-weight: 500;
+  text-decoration: none;
+}
+.link:hover {
+  border-color: var(--jt-text);
+}
+
+.cta {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid var(--jt-text);
+  border-radius: 4px;
+  background-color: var(--jt-highlighter);
+}
+.cta .button-text {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0.8rem 1rem;
+  color: var(--jt-ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--jt-text);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .link {
+    transition: border-color 0.15s;
+  }
+}

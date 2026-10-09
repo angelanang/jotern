@@ -5,6 +5,6 @@ app-sync-status {
 }
 
 main {
-  position: fixed;
-  left: 250px;
+  margin-left: 250px;
+  padding: 24px;
 }
